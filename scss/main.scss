@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$he : 100vh;
+$wi : 100%;
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrap {
+    width: $wi;
+    height: auto;
+}
+
+header{
+    width: $wi;
+    height: 90px;
+    background-color: gray;
+    position: fixed;
+    top: 0;
+}
+
+#main_view{
+    width: $wi;
+    height: $he;
+    background-color: #999;
+}
+
+#introduce{
+    width: $wi;
+    height: 300vh;
+    background-color: beige;
+}
+
+#hotell_more{
+    width: $wi;
+    height: $he;
+    position: relative;
+    overflow: hidden;
+    top: 0%;
+    .slide{
+        width: 500vw;
+        height: $he;
+        position: absolute;
+        display: flex;
+        transition: 1s;
+        li{
+            width: $wi;
+            height: $he;
+            border: 1px solid red;
+        }
+    }
+}
+
+
+
