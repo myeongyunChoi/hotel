@@ -7,18 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <div id="wrap">
-        <header></header>
-        <div id="main_view"></div>
-        <div id="introduce"></div>
+        <header>
+            <ul class="menu">
+                <li></li>
+                <li><a href="">SIGNIEL</a>
+                    <a href="">HOTELL & RESOTS</a>
+                </li>
+                <li>MENU</li>
+            </ul>
+        </header>
+
+        <div id="main_view">
+            <img src="img/main/main.jpg" alt="">
+            <div class="text_line">
+                <h2 class="em">LIVE</h2><span>삶의 가치를 더하다</span>
+                <h2 class="em">BEYOND</h2><span>롯데 시그니엘</span>
+                <h2>EXPECTATIONS</h2>
+            </div>
+        </div>
+
+        <div id="introduce">
+            <div class="guide">
+                <h2 style="font-size: 150px;">test</h2>
+            </div>
+            <div class="guide_img1">
+                <div class="guide_img_box1"></div>
+            </div>
+            <div class="guide_img2">
+                <div class="guide_img_box2"></div>
+            </div>
+        </div>
+
         <div id="hotell_more">
             <ul class="slide">
-                <li>
+                <li class="test">
                     <div>
                         <h1>1</h1>
                     </div>
@@ -45,58 +78,90 @@
                 </li>
             </ul>
         </div>
-        <div id="room"></div>
-        <div id="shilla"></div>
+        <div id="room">
+            <ul class="room_txt">
+                <li>Inspiration</li>
+                <li>세계적 거장의 작품부터,</li>
+                <li>문화 소통의 시간까지</li>
+                <li>예술이라는 공감 언어로 채우는 하루</li>
+            </ul>
+            <ul class="room_list">
+                <li>
+                    <a href="">MORE</a>
+                    <div class="room1"></div>
+                </li>
+                <li>
+                    <div class="room2"></div>
+                </li>
+                <li>
+                    <div class="room3"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="shilla">
+            <div class="detail">
+                <ul class="detail_txt">
+                    <li>Inspiration</li>
+                    <li>세계적 거장의 작품부터,</li>
+                    <li>문화 소통의 시간까지</li>
+                    <li>예술이라는 공감 언어로 채우는 하루</li>
+                </ul>
+                <div class="detail_bot">
+                    <ul class="detail_bot_txt"></ul>
+                    <ul class="detail_bot_txt"></ul>
+                </div>
+            </div>
+            <div class="shilla_view"></div>
+        </div>
+        <footer></footer>
     </div>
 
     <script>
 
-        const cont = document.getElementById('introduce');
-        const slide_wrap = document.getElementById('hotell_more');
-        const slide_start = slide_wrap.offsetTop;
-        const slider = document.querySelector('.slide');
-        const s_wid = slider.offsetWidth;
-        //스크롤 내리고 일정 지점부터 시작되도록 변경
-        //slide의 오프셋 탑값 가져와서 실행 
-        const s_li = slider.children;
 
-        let win_wid = window.innerWidth;
-        let s_move_max = (s_wid - win_wid) * -1;
+        window.addEventListener("scroll", function () {
 
-        let mov = 0;
+            // const cont = document.getElementById("introduce");
+            const slide_wrap = document.getElementById("hotell_more");
+            const slide = document.querySelector(".slide");
+            const s_wid = slide.offsetWidth;
+            const s_top = slide_wrap.offsetTop;
+            const s_hei = slide_wrap.clientHeight;
+            const s_li = slide.children;
+            const room_top = document.querySelector("#room").offsetTop;
 
 
-        cont.addEventListener('wheel', function (e) {
-            e.preventDefault;
-            // if (e.deltaY > 0) {//휠값이양수일 때
-            //     slide_wrap.style.top = `0%`;
+            let mov = 0;
+            let win_top = window.scrollY;
+            let win_wid = window.innerWidth;
+            let s_move_max = (s_wid - win_wid) * -1;
+
+            let ratio = s_wid / s_hei;
+            //높이와 넓이의 비율
+
+            // if (win_top > 0){
+
             // }
-        });
 
-        slide_wrap.addEventListener('wheel', function (e) {
-            e.preventDefault;
-            // if (e.deltaY < 0 && mov >= 0) {//스크롤 값이 음수일 때 = 스크롤을 올릴 때
-            //     setTimeout(() => {
-            //         slide_wrap.style.top = `100%`;
-            //     }, 500);//2번째 섹션이 아래로 밀림
-            //     return;
-            // }
-            move_slider(e.deltaY);
-            on_indicator();
-        });
 
-        function move_slider(amount) {
-            mov -= amount;
-            if (mov < s_move_max) {//-휠값이 슬라이드 전체 넓이보다 작을 때
-                mov = s_move_max;//-휠값이 슬라이드 움직임 정도와 같ㅇ아짐
-                return;
-            } else if (mov > 0) {//휠값이 음수가 되었을 때= 스크롤 올릴 때
-                mov = 0;//휠값은 0이 되고
-                return;
+            if (win_top > s_top) {
+                slide.classList.add("fix");
+
+                let mov = -(win_top - s_top) * ratio;
+
+                if (mov < s_move_max) {
+                    mov = s_move_max;
+                }
+                slide.style.transform = `translateX(${mov}px)`;
+            } else {
+                slide.classList.remove("fix");
             }
-            slider.style.transform = `translateX(${mov}px)`;
-            li_upDown(amount);
-        }
+
+            if (win_top >= room_top) {
+                slide.classList.remove("fix");
+            }
+
+        })
     </script>
 </body>
 
