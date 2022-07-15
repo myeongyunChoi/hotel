@@ -91,6 +91,7 @@ header {
         transform: translateY(-50%);
         display: flex;
         justify-content: space-evenly;
+        transition: 0.5s;
         h2{
             font-size: 120px;
             color: white;
@@ -168,11 +169,10 @@ header {
         display: flex;
         transition: 0.5s;
         z-index: -500;
-
         li {
             width: $wi;
             height: $he;
-            background-color: #999;
+            color: white;
         }
     }
 }
@@ -181,6 +181,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: black;
 }
 
 #room {

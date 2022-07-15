@@ -80,6 +80,7 @@ header {
   transform: translateY(-50%);
   display: flex;
   justify-content: space-evenly;
+  transition: 0.5s;
 }
 #main_view .text_line h2 {
   font-size: 120px;
@@ -154,13 +155,14 @@ header {
 #hotell_more .slide li {
   width: 100%;
   height: 100vh;
-  background-color: #999;
+  color: white;
 }
 
 .fix {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: black;
 }
 
 #room {
