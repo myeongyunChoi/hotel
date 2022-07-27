@@ -23,10 +23,10 @@
         <header>
             <ul class="menu">
                 <li></li>
-                <li><a href="">SIGNIEL</a>
-                    <a href="">HOTELL & RESOTS</a>
+                <li><a href="" class="menu_txt">SIGNIEL</a>
+                    <a href="" class="menu_txt">HOTELL & RESOTS</a>
                 </li>
-                <li>MENU</li>
+                <li class="menu_txt">MENU</li>
             </ul>
         </header>
 
@@ -41,7 +41,15 @@
 
         <div id="introduce">
             <div class="guide">
-                <h2 style="font-size: 150px;">test</h2>
+                <div class="guide_big_box">
+                    <h2 class="left_h">LEFTLEFT</h2>
+                    <h2 class="center_h">CENTER</h2>
+                    <h2 class="right_h">RIGHTRIG</h2>
+                </div>
+                <h4><span>Creative</span></h4>
+                <p><span>가나다라마바사아자차카타파하</span></p>
+                <p><span>가나다라마바사아자차카타파하</span></p>
+                <div><a href="">MORE</a></div>
             </div>
             <div class="guide_img1">
                 <div class="guide_img_box1"></div>
@@ -118,53 +126,7 @@
         <footer></footer>
     </div>
 
-    <!-- <script>
-
-
-        window.addEventListener("scroll", function () {
-
-            // const cont = document.getElementById("introduce");
-            const slide_wrap = document.getElementById("hotell_more");
-            const slide = document.querySelector(".slide");
-            const s_wid = slide.offsetWidth;
-            const s_top = slide_wrap.offsetTop;
-            const s_hei = slide_wrap.clientHeight;
-            const s_li = slide.children;
-            const room_top = document.querySelector("#room").offsetTop;
-
-
-            let mov = 0;
-            let win_top = window.scrollY;
-            let win_wid = window.innerWidth;
-            let s_move_max = (s_wid - win_wid) * -1;
-
-            let ratio = s_wid / s_hei;
-            //높이와 넓이의 비율
-
-            // if (win_top > 0){
-
-            // }
-
-
-            if (win_top > s_top) {
-                slide.classList.add("fix");
-
-                let mov = -(win_top - s_top) * ratio;
-
-                if (mov < s_move_max) {
-                    mov = s_move_max;
-                }
-                slide.style.transform = `translateX(${mov}px)`;
-            } else {
-                slide.classList.remove("fix");
-            }
-
-            if (win_top >= room_top) {
-                slide.classList.remove("fix");
-            }
-
-        })
-    </script> -->
+    <script></script>
 </body>
 
 </html>

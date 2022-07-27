@@ -43,10 +43,8 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
 }
 .menu li a {
-  color: white;
   letter-spacing: 5px;
   line-height: 30px;
 }
@@ -60,6 +58,11 @@ header {
   text-align: center;
   letter-spacing: 2px;
   font-weight: 500;
+}
+
+.menu_txt {
+  transition: 0.5s;
+  color: white;
 }
 
 #main_view {
@@ -102,16 +105,9 @@ header {
 
 #introduce {
   width: 100%;
-  height: 400vh;
+  height: 500vh;
   position: relative;
   background-color: white;
-}
-#introduce .guide {
-  width: 100%;
-  height: 100vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 #introduce .guide_img1 {
   width: 100%;
@@ -136,6 +132,54 @@ header {
   width: 720px;
   height: 820px;
   background-color: black;
+}
+
+.guide {
+  width: 100%;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom: 50vh;
+}
+.guide h4 {
+  font-family: "EB Garamond", serif;
+  font-size: 60px;
+  position: relative;
+}
+.guide p {
+  font-family: "Roboto", sans-serif;
+}
+
+.guide_big_box {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  padding-top: 20vh;
+}
+.guide_big_box h2 {
+  font-size: 190px;
+  line-height: 180px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
+}
+.guide_big_box .left_h {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20vh;
+}
+.guide_big_box .center_h {
+  position: absolute;
+  right: 50%;
+  top: 37.5vh;
+}
+.guide_big_box .right_h {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  top: 55vh;
 }
 
 #hotell_more {
@@ -255,4 +299,12 @@ footer {
   width: 100%;
   height: 400px;
   background-color: #999;
+}
+
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
 }
