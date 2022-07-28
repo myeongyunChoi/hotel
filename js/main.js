@@ -63,7 +63,8 @@ window.addEventListener("scroll", function () {
     const s_wid = slide.offsetWidth;
     const s_top = slide_wrap.offsetTop;
     const s_hei = slide_wrap.clientHeight;
-    const s_li = slide.children;
+    const s_li = slide.querySelectorAll("li");
+    const s_li_he = s_li[0].clientHeight;
     const room_top = document.querySelector("#room").offsetTop;
 
 
@@ -93,6 +94,17 @@ window.addEventListener("scroll", function () {
 
     if (win_top >= room_top) {
         slide.classList.remove("fix");
+    }
+
+    const s_li_1_top = s_top + s_li_he;
+    const third_txt = document.querySelectorAll(".third_txt span");
+
+    for(let t = 0; t < third_txt.length; t++){
+        if(win_top >= s_top + (s_li_he * 3)){
+            third_txt[t].style.marginTop = 0;
+        }else{
+            third_txt[t].style.marginTop = `-7rem`;
+        }
     }
 
 
