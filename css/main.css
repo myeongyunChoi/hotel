@@ -1,7 +1,13 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 0.625vw;
 }
 
 ul,
@@ -21,7 +27,7 @@ a {
 
 header {
   width: 100%;
-  height: 130px;
+  height: 12.5vh;
   position: fixed;
   top: 0;
   z-index: 500;
@@ -30,37 +36,53 @@ header {
 .menu {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 2%;
 }
+
 .menu li {
   width: auto;
   height: 100%;
   text-align: center;
-  font-family: "Arima", cursive;
-  font-size: 34px;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .menu li a {
-  letter-spacing: 5px;
-  line-height: 30px;
+  letter-spacing: 0.5rem;
+  line-height: 2.5rem;
 }
+
 .menu li a:nth-child(2) {
-  font-size: 16px;
-  letter-spacing: 2px;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
   font-weight: bold;
 }
+
 .menu li:nth-child(3) {
-  font-size: 25px;
+  font-size: 1.75rem;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   font-weight: 500;
 }
 
 .menu_txt {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   color: white;
 }
@@ -70,36 +92,47 @@ header {
   height: 100vh;
   position: relative;
 }
+
 #main_view img {
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: -500;
 }
+
 #main_view .text_line {
   width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 #main_view .text_line h2 {
-  font-size: 120px;
+  font-size: 6vw;
   color: white;
-  line-height: 120px;
+  line-height: 12rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+
 #main_view .text_line .em {
-  font-family: "EB Garamond", serif;
+  font-family: 'Nanum Myeongjo', serif;
   font-weight: 900;
   font-style: italic;
 }
+
 #main_view .text_line span {
-  line-height: 150px;
-  font-size: 18px;
+  line-height: 13rem;
+  font-size: 1.8rem;
   color: white;
 }
 
@@ -109,29 +142,50 @@ header {
   position: relative;
   background-color: white;
 }
+
 #introduce .guide_img1 {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #introduce .guide_img1 .guide_img_box1 {
-  width: 580px;
-  height: 580px;
-  background-color: black;
+  width: 30vw;
+  height: 55vh;
+  background-color: red;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
 }
+
 #introduce .guide_img2 {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #introduce .guide_img2 .guide_img_box2 {
-  width: 720px;
-  height: 820px;
-  background-color: black;
+  width: 32.5vw;
+  height: 80vh;
+  background: #b3d4fc;
+  margin-right: 5%;
+  -webkit-transition: 0.5s ease-int;
+  transition: 0.5s ease-int;
 }
 
 .guide {
@@ -140,15 +194,34 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin-bottom: 50vh;
+  margin-bottom: 25vh;
+  padding: 4% 2.5%;
 }
+
 .guide h4 {
-  font-family: "EB Garamond", serif;
-  font-size: 60px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 3.5vw;
   position: relative;
+  margin-bottom: 0.75%;
+  margin-top: -2.5%;
 }
+
 .guide p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2.1vw;
+  line-height: 4.75vh;
+}
+
+.guide a {
+  display: inline-block;
+  width: auto;
+  padding: 0.75% 1%;
+  border: 0.3rem solid black;
+  border-radius: 5rem;
+  margin: 1% 0;
+  text-align: center;
+  font-size: 1.25vw;
+  color: black;
 }
 
 .guide_big_box {
@@ -157,28 +230,35 @@ header {
   position: relative;
   padding-top: 20vh;
 }
+
 .guide_big_box h2 {
-  font-size: 190px;
-  line-height: 180px;
+  font-size: 11vw;
+  line-height: 18rem;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
+
 .guide_big_box .left_h {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   top: 20vh;
 }
+
 .guide_big_box .center_h {
   position: absolute;
   right: 50%;
   top: 37.5vh;
 }
+
 .guide_big_box .right_h {
   position: absolute;
   right: 50%;
-  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
   top: 55vh;
 }
 
@@ -189,24 +269,22 @@ header {
   top: 0;
   overflow: hidden;
 }
+
 #hotell_more .slide {
   width: 500vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: -500;
 }
+
 #hotell_more .slide li {
   width: 100%;
   height: 100vh;
   color: white;
-}
-
-.fix {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: black;
 }
 
 #room {
@@ -215,11 +293,13 @@ header {
   background-color: blue;
   padding: 7% 2%;
 }
+
 #room .room_txt {
   width: 50%;
   height: auto;
   background-color: green;
 }
+
 #room .room_txt li {
   line-height: 50px;
 }
@@ -227,25 +307,40 @@ header {
 .room_list {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .room_list li {
   width: 32.5%;
   height: 100%;
   border: 1px solid black;
   position: relative;
 }
+
 .room_list li:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .room_list li:first-child .room1 {
   width: 100%;
   height: 650px;
   background-color: aquamarine;
 }
+
 .room_list .room2 {
   width: 100%;
   height: 406px;
@@ -253,6 +348,7 @@ header {
   position: absolute;
   top: 25%;
 }
+
 .room_list .room3 {
   width: 100%;
   height: 806px;
@@ -262,6 +358,8 @@ header {
 #shilla {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 4% 2%;
 }
@@ -270,19 +368,31 @@ header {
   width: 50%;
   height: 100%;
   border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .detail .detail_txt {
   height: 50%;
   background-color: #999;
 }
+
 .detail .detail_bot {
   height: 50%;
   background-color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 .detail .detail_bot ul {
   width: 50%;
   height: 100%;
@@ -307,4 +417,19 @@ footer {
 
 .white {
   color: white;
+}
+
+.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+.op {
+  opacity: 1;
+}
+
+.op_2 {
+  opacity: 0.2;
 }

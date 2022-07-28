@@ -2,6 +2,7 @@ window.addEventListener("scroll", function () {
 
     // const cont = document.getElementById("introduce");
 
+    //main_view text 사라지는 효과
     const txt_line = document.querySelector(".text_line");
     let win_top = window.scrollY;
 
@@ -11,9 +12,10 @@ window.addEventListener("scroll", function () {
         txt_line.style.opacity = "1";
     }
 
+    //
     const guide_top = document.getElementById("introduce").offsetTop;
-    const mov_letter = document.querySelectorAll(".guide_big_box > h2");
 
+    const mov_letter = document.querySelectorAll(".guide_big_box > h2");
 
     for (let l = 0; l < mov_letter.length; l++) {
         if (win_top > guide_top / 2) {
@@ -23,6 +25,27 @@ window.addEventListener("scroll", function () {
         } else {
             mov_letter[l].style = "";
         }
+    }
+
+
+    const guide_img1 = document.querySelector(".guide_img1").offsetTop;
+    const guide_img1_top = guide_img1 + guide_top;
+    const guide_img_box1 = document.querySelector(".guide_img1 > div");
+
+    const guide_img2 = document.querySelector(".guide_img2").offsetTop;
+    const guide_img2_top = guide_img2 + guide_top;
+    const guide_img_box2 = document.querySelector(".guide_img2 > div");
+
+    if(win_top > guide_img1_top * 0.75){
+        guide_img_box1.classList.remove("op_2");
+    }else{
+        guide_img_box1.classList.add("op_2");
+    }
+
+    if(win_top > guide_img2_top * 0.75){
+        guide_img_box2.classList.remove("op_2");
+    }else{
+        guide_img_box2.classList.add("op_2");
     }
 
     const slide_wrap = document.getElementById("hotell_more");
