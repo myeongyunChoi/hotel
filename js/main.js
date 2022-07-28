@@ -27,6 +27,15 @@ window.addEventListener("scroll", function () {
         }
     }
 
+    const guide_txt = document.querySelectorAll(".guide span");
+    for(let s = 0; s < guide_txt.length; s++){
+        if(win_top >= guide_top){
+            guide_txt[s].style.transform= "translateY(0)";
+        }else{
+            guide_txt[s].style.transform= "translateY(120%)";
+        }
+    }
+
 
     const guide_img1 = document.querySelector(".guide_img1").offsetTop;
     const guide_img1_top = guide_img1 + guide_top;
@@ -42,11 +51,12 @@ window.addEventListener("scroll", function () {
         guide_img_box1.classList.add("op_2");
     }
 
-    if(win_top > guide_img2_top * 0.75){
+    if(win_top > guide_img2_top * 0.85){
         guide_img_box2.classList.remove("op_2");
     }else{
         guide_img_box2.classList.add("op_2");
     }
+
 
     const slide_wrap = document.getElementById("hotell_more");
     const slide = document.querySelector(".slide");

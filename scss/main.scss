@@ -142,6 +142,7 @@ header {
             height: 55vh;
             background-color: red;
             transition: 0.5s ease-in;
+            z-index: 600;
         }
     }
 
@@ -157,7 +158,8 @@ header {
             height: 80vh;
             background: #b3d4fc;
             margin-right: 5%;
-            transition: 0.5s ease-int;
+            transition: 0.5s ease-in;
+            z-index: 600;
         }
     }
 }
@@ -173,27 +175,58 @@ header {
     h4{
         font-family: 'Nanum Myeongjo', serif;
         font-size: 3.5vw;
+        margin-bottom: 2rem;
+        margin-top: - 4rem;
         position: relative;
-        margin-bottom: 0.75%;
-        margin-top: - 2.5%;
+        height: 3.5vw;
+        overflow: hidden;
+
+        span{
+            transform: translateY(120%);
+            position: absolute;
+            top: 0;
+            transition: 0.3s ease-in;
+        }
     }
 
     p{
         font-family: $kor_font;
         font-size: 2.1vw;
-        line-height: 4.75vh;
+        position: relative;
+        height: 3vw;
+        overflow: hidden;
+
+        span{
+            transform: translateY(120%);
+            position: absolute;
+            top: 0;
+            transition: 0.3s ease-in;
+        }
     }
 
     a{
-        display:  inline-block;
-        width: auto;
-        padding: 0.75% 1%;
-        border: 0.3rem solid black;
-        border-radius: 5rem;
-        margin: 1% 0;
+        display: block;
+        width: 10rem;
+        margin: 1.25rem 0;
         text-align: center;
         font-size: 1.25vw;
         color: black;
+        overflow: hidden;
+        position: relative;
+        height: 4.7rem;
+        overflow: hidden;
+
+        span{
+            border: 0.35rem solid black;
+            padding: 0.25rem 1vw;
+            border-radius: 5rem;
+            position: absolute;
+            top: 0;
+            left: 0%;
+            transform: translateY(120%);
+            line-height: 3.5rem;
+            transition: 0.3s ease-in;
+        }
     }
 }
 
@@ -238,19 +271,73 @@ header {
     position: relative;
     top: 0;
     overflow: hidden;
+}
 
-    .slide {
-        width: 500vw;
+.slide {
+    width: 500vw;
+    height: $he;
+    display: flex;
+    transition: 0.35s;
+    z-index: -500;
+    background-color: white;
+
+    li {
+        position: relative;
+        width: $wi;
         height: $he;
-        display: flex;
-        transition: 0.5s;
-        z-index: -500;
-        li {
-            width: $wi;
-            height: $he;
+        color: white;
+    }
+}
+
+.first_slide{
+
+    .middle_txt{
+        position: absolute;
+        left: 5rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        h4{
+            font-family: $title_font;
+            font-size: 7.5rem;
+            margin-bottom: 2rem;
+        }
+
+        a{
+            cursor: pointer;
+            font-family: $eng_font;
+            font-size: 3rem;
             color: white;
+            border: 0.35rem solid white;
+            border-radius: 3rem;
+            padding: 0.5rem 1rem ;
         }
     }
+
+    h2{
+        font-weight: 400;
+        font-size: 22rem;
+        font-family: $eng_font;
+        letter-spacing: 0.75rem;
+        position: absolute;
+        bottom:0;
+        left: 50%;
+        transform: translate(-50%);
+
+        span{
+            font-family: $title_font;
+        }
+    }
+}  
+
+.second_slide{
+    background-image: url("../img/main/second_bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.third_slide{
+
 }
 
 #room {
