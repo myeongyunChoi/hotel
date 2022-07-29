@@ -19,7 +19,7 @@ window.addEventListener("scroll", function () {
 
     for (let l = 0; l < mov_letter.length; l++) {
         if (win_top > guide_top / 2) {
-                mov_letter[0].style.transform = `translateX(-100%)`;
+                mov_letter[0].style.transform = `translateX(-125%)`;
                 mov_letter[1].style.transform = `translateX(50%)`;
                 mov_letter[2].style.transform = `translateX(100%)`;
         } else {
