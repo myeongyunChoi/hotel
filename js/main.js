@@ -79,6 +79,7 @@ window.addEventListener("scroll", function () {
     //가로스크롤 생성
     if (win_top > s_top) {
         slide.classList.add("fix");
+        slide_wrap.style.background = "black";
 
         let mov = -(win_top - s_top) * ratio;
 
@@ -88,6 +89,7 @@ window.addEventListener("scroll", function () {
         slide.style.transform = `translateX(${mov}px)`;
     } else {
         slide.classList.remove("fix");
+        slide_wrap.style.background = "white";
         mov = 0;
         slide.style.transform = `translateX(${mov}px)`;
     }
@@ -96,14 +98,34 @@ window.addEventListener("scroll", function () {
         slide.classList.remove("fix");
     }
 
-    const s_li_1_top = s_top + s_li_he;
     const third_txt = document.querySelectorAll(".third_txt span");
 
     for(let t = 0; t < third_txt.length; t++){
-        if(win_top >= s_top + (s_li_he * 3)){
+        if(win_top >= s_top + (s_li_he * 2.75)){
             third_txt[t].style.marginTop = 0;
         }else{
             third_txt[t].style.marginTop = `-7rem`;
+        }
+    }
+
+    const fourth_txt = document.querySelectorAll(".fourth_txt span");
+
+    for( let f = 0; f < fourth_txt.length; f++){
+        if(win_top >= s_top + (s_li_he * 4.75)){
+            fourth_txt[f].style.marginBottom = "0";
+        }else{
+            fourth_txt[f].style = " ";
+        }
+    }
+
+    const fifth_txt = document.querySelectorAll(".fifth_txt span");
+
+    for( let i = 0; i < fifth_txt.length; i++){
+        if(win_top >= s_top + (s_li_he * 6)){
+            fifth_txt[i].style.top = "0";
+            fifth_txt[i].style.opacity = "1";
+        }else{
+            fifth_txt[i].style = " ";
         }
     }
 

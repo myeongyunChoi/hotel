@@ -50,7 +50,7 @@ header {
     padding: 0 2%;
 
     li {
-        width: auto;
+        width: 15rem;
         height: 100%;
         text-align: center;
         font-family: $title_font;
@@ -271,15 +271,18 @@ header {
     position: relative;
     top: 0;
     overflow: hidden;
+    background-color: white;
+    z-index: -100;
+    transition: all 0.2s ease-in;
 }
 
 .slide {
     width: 600vw;
     height: $he;
     display: flex;
-    transition: 0.35s;
-    z-index: -500;
-    background-color: white;
+    // transition: 0.35s;
+    // z-index: -50;
+    //bg_color 부모요소로 옮기면서 인덱스도 지움
 
     li {
         position: relative;
@@ -440,30 +443,101 @@ header {
         font-size: 19rem;
         font-family: $eng_font;
         letter-spacing: 0.75rem;
-        position: absolute;
-        bottom:0;
-        right: 0;
-        // transform: translate(-);
+        width: 100%;
+        height: 100vh;
+        display:  flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        // position: absolute;
+        // bottom:0;
+        // right: 0;
 
         span{
+            margin-bottom: -25rem;
             font-family: $title_font;
+            height: auto;
+            transition: all 0.25s ease-in;
+
+            &:nth-child(2){
+                transition: all 0.75s ease-in;
+            }
+
+            &:nth-child(3){
+                font-family: $eng_font;
+                transition: all 1.25s ease-in;
+            }
         }
     }
 }  
 
+.fifth_txt{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+
+    p{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 5rem;
+
+        span{
+            top:5rem;
+            position: absolute;
+            left: 50%;
+            transform: translate((-50%));
+            transition: 1s all ease-in;
+            opacity: 0;
+        }
+    }
+}
+
+
 #room {
     width: $wi;
     height: 150vh;
-    background-color: blue;
-    padding: 7% 2%;
+    background-color: white;
+    padding: 25rem 5rem;
 
     .room_txt {
         width: 50%;
         height: auto;
-        background-color: green;
 
-        li {
-            line-height: 50px;
+        h4{
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 3.5vw;
+            margin-bottom: 2rem;
+            margin-top: - 4rem;
+            position: relative;
+            height: 3.5vw;
+            overflow: hidden;
+    
+            span{
+                // transform: translateY(120%);
+                position: absolute;
+                top: 0;
+                transition: 0.3s ease-in;
+            }
+        }
+    
+        p{
+            font-family: $kor_font;
+            font-size: 2.1vw;
+            position: relative;
+            height: 3vw;
+            overflow: hidden;
+    
+            span{
+                // transform: translateY(120%);
+                position: absolute;
+                top: 0;
+                transition: 0.3s ease-in;
+            }
         }
     }
 }
@@ -477,8 +551,11 @@ header {
     li {
         width: 32.5%;
         height: 100%;
-        border: 1px solid black;
         position: relative;
+        
+        p{
+            background-color: white;
+        }
     }
 
     li:first-child {
@@ -486,55 +563,142 @@ header {
         flex-direction: column;
         justify-content: space-between;
 
+        a{
+            display: block;
+            width: 10rem;
+            margin: 1.25rem 0;
+            text-align: center;
+            font-size: 1.25vw;
+            color: black;
+            height: 4.7rem;
+            overflow: hidden;
+            border: 0.35rem solid black;
+            border-radius: 5rem;
+            line-height: 4.35rem;
+        }
+
         .room1 {
             width: 100%;
             height: 650px;
             background-color: aquamarine;
         }
     }
+}
 
-    .room2 {
-        width: 100%;
-        height: 406px;
-        background-color: #555;
-        position: absolute;
-        top: 25%;
-    }
+.room2 {
+    width: 100%;
+    height: 406px;
+    background-color: #555;
+    position: absolute;
+    top: 25%;
+}
 
-    .room3 {
-        width: 100%;
-        height: 806px;
-        background-color: #999;
-    }
+.room3 {
+    width: 100%;
+    height: 806px;
+    background-color: #999;
 }
 
 #shilla {
     width: $wi;
     height: $he;
     display: flex;
-    padding: 4% 2%;
+    padding: 10rem 5rem;
+    background-color: white;
 }
 
 .detail{
     width: 50%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
+
     .detail_txt{
         height: 50%;
-        background-color: #999;
+
+        h4{
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 3.5vw;
+            margin-bottom: 2rem;
+            position: relative;
+            height: 3.5vw;
+            overflow: hidden;
+    
+            span{
+                // transform: translateY(120%);
+                position: absolute;
+                top: 0;
+                transition: 0.3s ease-in;
+            }
+        }
+    
+        p{
+            font-family: $kor_font;
+            font-size: 2.1vw;
+            position: relative;
+            height: 3vw;
+            overflow: hidden;
+    
+            span{
+                // transform: translateY(120%);
+                position: absolute;
+                top: 0;
+                transition: 0.3s ease-in;
+            }
+        }
+
+        a{
+            display: block;
+            width: 10rem;
+            margin: 1.25rem 0;
+            text-align: center;
+            font-size: 1.25vw;
+            color: black;
+            height: 4.7rem;
+            overflow: hidden;
+            border: 0.35rem solid black;
+            border-radius: 5rem;
+            line-height: 4.35rem;
+        }
     }
     .detail_bot{
         height: 50%;
-        background-color: #777;
         display: flex;
         justify-content: space-evenly;
-        ul{
-            width: 50%;
-            height: 100%;
-            border: 1px solid green;
-        }
+    }
+}
+
+.detail_bot_txt{
+    width: 50%;
+    height: 100%;
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h5{
+        font-family: $eng_font;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        position: relative;
+        width: 100%;
+        height: 3rem;
+        overflow: hidden;
+    }
+
+    p{
+        font-size: 1.75rem;
+        font-family: $kor_font;
+        font-weight: 400;
+        position: relative;
+        height: 2.5rem;
+    }
+
+    span{
+        position: absolute;
+        top:0;
+        // top: -5rem;
     }
 }
 
@@ -563,7 +727,6 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
 }
 
 .op{
@@ -573,3 +736,4 @@ footer {
 .op_2{
     opacity: 0.2;
 }
+
