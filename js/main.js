@@ -75,9 +75,14 @@ window.addEventListener("scroll", function () {
     let ratio = s_wid / s_hei;
     //높이와 넓이의 비율
 
+    const color_ch = document.querySelectorAll(".color_ch");
+
 
     //가로스크롤 생성
     if (win_top > s_top) {
+        for(let c = 0; c < color_ch.length; c++){
+            color_ch[c].classList.add("white")
+        }
         slide.classList.add("fix");
         slide_wrap.style.background = "black";
 
@@ -88,6 +93,9 @@ window.addEventListener("scroll", function () {
         }
         slide.style.transform = `translateX(${mov}px)`;
     } else {
+        for(let c = 0; c < color_ch.length; c++){
+            color_ch[c].classList.remove("white");
+        }
         slide.classList.remove("fix");
         slide_wrap.style.background = "white";
         mov = 0;
@@ -102,19 +110,28 @@ window.addEventListener("scroll", function () {
 
     for(let t = 0; t < third_txt.length; t++){
         if(win_top >= s_top + (s_li_he * 2.75)){
-            third_txt[t].style.marginTop = 0;
+            third_txt[t].style.top = "0";
+            third_txt[t].style.opacity = "1";
+            third_txt[t].style.transition = `${t}s` ;
         }else{
-            third_txt[t].style.marginTop = `-7rem`;
+            third_txt[t].style = "";
+            third_txt[t].style.transition = `${t}s` ;
         }
     }
 
     const fourth_txt = document.querySelectorAll(".fourth_txt span");
+    const four_img = document.querySelector(".four_img");
+    const four_over = document.querySelector(".four_over");
 
     for( let f = 0; f < fourth_txt.length; f++){
         if(win_top >= s_top + (s_li_he * 4.75)){
             fourth_txt[f].style.marginBottom = "0";
+            four_img.style.opacity = "1";
+            four_over.style.width = "0";
         }else{
             fourth_txt[f].style = " ";
+            four_img.style.opacity = "0.3";
+            four_over.style.width = "100%";
         }
     }
 
@@ -124,8 +141,10 @@ window.addEventListener("scroll", function () {
         if(win_top >= s_top + (s_li_he * 6)){
             fifth_txt[i].style.top = "0";
             fifth_txt[i].style.opacity = "1";
+            fifth_txt[i].style.transition = `${i}s` ;
         }else{
-            fifth_txt[i].style = " ";
+            fifth_txt[i].style = "";
+            fifth_txt[i].style.transition = `${i}s` ;
         }
     }
 

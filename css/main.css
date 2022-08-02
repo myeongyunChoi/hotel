@@ -132,7 +132,7 @@ header {
 
 #main_view .text_line span {
   line-height: 13rem;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: white;
 }
 
@@ -215,8 +215,8 @@ header {
           transform: translateY(120%);
   position: absolute;
   top: 0;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .guide p {
@@ -232,8 +232,8 @@ header {
           transform: translateY(120%);
   position: absolute;
   top: 0;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .guide a {
@@ -259,8 +259,8 @@ header {
   -webkit-transform: translateY(120%);
           transform: translateY(120%);
   line-height: 3.5rem;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .guide_big_box {
@@ -325,7 +325,9 @@ header {
   position: relative;
   width: 100vw;
   height: 100vh;
-  color: white;
+  -webkit-transition: 0.5s all ease-in;
+  transition: 0.5s all ease-in;
+  color: black;
 }
 
 .slide li:nth-child(2) {
@@ -338,7 +340,7 @@ header {
 
 .first_slide .middle_txt {
   position: absolute;
-  left: 5rem;
+  left: 3.5rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -346,25 +348,26 @@ header {
 
 .first_slide .middle_txt h4 {
   font-family: "Nanum Myeongjo", serif;
-  font-size: 7.5rem;
-  margin-bottom: 2rem;
+  font-size: 6.5rem;
+  margin-bottom: 5rem;
 }
 
 .first_slide .middle_txt a {
+  color: black;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  font-size: 3rem;
-  color: white;
-  border: 0.35rem solid white;
+  font-size: 2rem;
+  border: 0.35rem solid black;
   border-radius: 3rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.25rem;
+  background-color: white;
 }
 
 .first_slide h2 {
   font-weight: 400;
-  font-size: 22rem;
+  font-size: 18rem;
   font-family: "Roboto", sans-serif;
-  letter-spacing: 0.75rem;
+  letter-spacing: -0.3rem;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -373,6 +376,7 @@ header {
 }
 
 .first_slide h2 span {
+  margin-right: 3rem;
   font-family: "Nanum Myeongjo", serif;
 }
 
@@ -393,14 +397,11 @@ header {
 }
 
 .third_txt {
-  width: 82.5%;
+  width: 80%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 3.5rem;
-  font-family: "Noto Sans KR", sans-serif;
-  letter-spacing: 0.1rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -408,21 +409,25 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
 }
 
 .third_txt p {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 5rem;
 }
 
 .third_txt p span {
-  display: block;
-  margin-top: -5rem;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  top: 5rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  opacity: 0;
+  color: white;
 }
 
 .fourth_slide h2 {
@@ -449,6 +454,7 @@ header {
   height: auto;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
+  color: white;
 }
 
 .fourth_slide h2 span:nth-child(2) {
@@ -460,6 +466,40 @@ header {
   font-family: "Roboto", sans-serif;
   -webkit-transition: all 1.25s ease-in;
   transition: all 1.25s ease-in;
+}
+
+.four_img {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -300;
+  width: 120rem;
+  height: 67.5rem;
+  opacity: 0.3;
+  -webkit-transition: 0.5s all ease-in;
+  transition: 0.5s all ease-in;
+}
+
+.four_img .four_over {
+  width: 120rem;
+  height: 67.5rem;
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.3;
+  -webkit-transition: 0.5s all ease-in;
+  transition: 0.5s all ease-in;
+}
+
+.four_img img {
+  width: 100%;
+  height: 100%;
 }
 
 .fifth_txt {
@@ -492,9 +532,8 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-  -webkit-transition: 1s all ease-in;
-  transition: 1s all ease-in;
   opacity: 0;
+  color: white;
 }
 
 #room {
@@ -609,7 +648,7 @@ header {
   background-color: #999;
 }
 
-#shilla {
+#signiel {
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -729,7 +768,7 @@ header {
   top: 0;
 }
 
-.shilla_view {
+.signiel_view {
   width: 50%;
   height: 100%;
   border: 1px solid black;
