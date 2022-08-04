@@ -130,6 +130,10 @@ header {
     position: relative;
     background-color: white;
 
+    img{
+        width: 100%;
+    }
+
     .guide_img1 {
         width: 100%;
         height: $he;
@@ -139,7 +143,7 @@ header {
 
         .guide_img_box1 {
             width:30vw;
-            height: 55vh;
+            height: auto;
             background-color: red;
             transition: 0.5s ease-in;
             z-index: 600;
@@ -155,7 +159,7 @@ header {
 
         .guide_img_box2 {
             width: 32.5vw;
-            height: 80vh;
+            height: auto;
             background: #b3d4fc;
             margin-right: 5%;
             transition: 0.5s ease-in;
@@ -483,7 +487,7 @@ header {
 
 #art {
     width: $wi;
-    height: 175vh;
+    height: 167.5vh;
     background-color: white;
     padding: 25rem 5rem;
 
@@ -497,11 +501,10 @@ header {
             margin-bottom: 2rem;
             margin-top: - 4rem;
             position: relative;
-            height: 3.5vw;
+            height: 7rem;
             overflow: hidden;
     
             span{
-                // transform: translateY(120%);
                 position: absolute;
                 top: 0;
                 transition: 0.3s ease-in;
@@ -510,13 +513,12 @@ header {
     
         p{
             font-family: $kor_font;
-            font-size: 2.1vw;
+            font-size: 2.5rem;
             position: relative;
-            height: 3vw;
+            height: 4rem;
             overflow: hidden;
     
             span{
-                // transform: translateY(120%);
                 position: absolute;
                 top: 0;
                 transition: 0.3s ease-in;
@@ -543,6 +545,8 @@ header {
         
         p{
             background-color: white;
+            font-size: 1.5rem;
+            line-height: 3rem;
         }
     }
 
@@ -554,7 +558,7 @@ header {
         a{
             display: block;
             width: 10rem;
-            margin: 1.25rem 0;
+            margin: 2rem 0;
             text-align: center;
             font-size: 1.25vw;
             color: black;
@@ -591,6 +595,7 @@ header {
     width: $wi;
     height: $he;
     display: flex;
+    justify-content: space-between;
     padding: 10rem 5rem;
     background-color: white;
 }
@@ -609,8 +614,9 @@ header {
             font-size: 3.5vw;
             margin-bottom: 2rem;
             position: relative;
-            height: 3.5vw;
+            height: 7rem;
             overflow: hidden;
+            letter-spacing: 0.3rem;
     
             span{
                 // transform: translateY(120%);
@@ -622,9 +628,9 @@ header {
     
         p{
             font-family: $kor_font;
-            font-size: 2.1vw;
+            font-size: 2.5rem;
             position: relative;
-            height: 3vw;
+            height: 4rem;
             overflow: hidden;
     
             span{
@@ -638,7 +644,7 @@ header {
         a{
             display: block;
             width: 10rem;
-            margin: 1.25rem 0;
+            margin: 2rem 0;
             text-align: center;
             font-size: 1.25vw;
             color: black;
@@ -666,40 +672,121 @@ header {
 
     h5{
         font-family: $eng_font;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 400;
         margin-bottom: 1rem;
         position: relative;
         width: 100%;
-        height: 3rem;
+        height: 4rem;
         overflow: hidden;
     }
 
     p{
-        font-size: 1.75rem;
+        font-size: 2rem;
         font-family: $kor_font;
-        font-weight: 400;
+        font-weight: 300;
         position: relative;
-        height: 2.5rem;
+        height: 3.3rem;
     }
 
     span{
         position: absolute;
         top:0;
-        // top: -5rem;
     }
 }
 
 .signiel_view{
-    width: 50%;
+    width: auto;
     height: 100%;
-    border: 1px solid black;
+    margin-right: 5rem;
+
+    img{
+        height: 100%;
+    }
 }
 
 footer {
     width: $wi;
-    height: 400px;
+    height: 23.5rem;
     background-color: #999;
+    display: flex;
+
+    &>div{
+        height: 100%;
+        width: 31%;
+        border-left: 0.5px solid white;
+        padding: 3rem 0 0 2rem;
+    }
+
+    .foot_3{
+        width: 38%;
+        overflow: hidden;
+        background-color: black;
+        position: relative;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.6;
+        }
+    }
+}
+
+.foot_2{
+    line-height: 1.5rem;
+
+    a{
+        font-size: 1.2rem;
+        color: white;
+        font-family: $kor_font;
+        font-weight: 200;
+    }
+}
+
+.foot_menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+        width: 15rem;
+        height: 100%;
+        text-align: center;
+        font-family: $title_font;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a{
+            letter-spacing: 0.5rem;
+            line-height: 2.5rem;
+            color: white;
+        }
+        a:nth-child(2){
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            font-weight: bold;
+        }
+    }
+}
+
+.foot_3_txt{
+    position: absolute;
+    z-index: 10;
+    li{
+        font-size: 1.2rem;
+        color: white;
+        font-family: $kor_font;
+        font-weight: 200;
+    }
+}
+
+.menu_txt{
+    transition: 0.5s;
+    color: white;
 }
 
 //js class
