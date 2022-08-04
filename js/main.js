@@ -65,7 +65,7 @@ window.addEventListener("scroll", function () {
     const s_hei = slide_wrap.clientHeight;
     const s_li = slide.querySelectorAll("li");
     const s_li_he = s_li[0].clientHeight;
-    const room_top = document.querySelector("#room").offsetTop;
+    const art_top = document.querySelector("#art").offsetTop;
 
 
     let mov = 0;
@@ -102,7 +102,7 @@ window.addEventListener("scroll", function () {
         slide.style.transform = `translateX(${mov}px)`;
     }
 
-    if (win_top >= room_top) {
+    if (win_top >= art_top) {
         slide.classList.remove("fix");
     }
 
@@ -148,7 +148,6 @@ window.addEventListener("scroll", function () {
         }
     }
 
-
     const one_hei = document.querySelector("#main_view").clientHeight;
     const menu_txt = document.querySelectorAll(".menu_txt");
 
@@ -162,6 +161,10 @@ window.addEventListener("scroll", function () {
         if (win_top > s_top) {
             menu_txt[i].classList.add("white");
         } else {
+            menu_txt[i].classList.remove("white");
+        }
+
+        if(win_top > art_top){
             menu_txt[i].classList.remove("white");
         }
     }

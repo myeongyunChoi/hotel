@@ -309,8 +309,8 @@ header {
   overflow: hidden;
   background-color: white;
   z-index: -100;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in;
 }
 
 .slide {
@@ -517,6 +517,9 @@ header {
           justify-content: center;
   font-size: 3.5rem;
   letter-spacing: 0.1rem;
+  background-image: url(../img/main/five_bg.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .fifth_txt p {
@@ -536,19 +539,19 @@ header {
   color: white;
 }
 
-#room {
+#art {
   width: 100%;
-  height: 150vh;
+  height: 175vh;
   background-color: white;
   padding: 25rem 5rem;
 }
 
-#room .room_txt {
+#art .art_txt {
   width: 50%;
   height: auto;
 }
 
-#room .room_txt h4 {
+#art .art_txt h4 {
   font-family: 'Nanum Myeongjo', serif;
   font-size: 3.5vw;
   margin-bottom: 2rem;
@@ -558,14 +561,14 @@ header {
   overflow: hidden;
 }
 
-#room .room_txt h4 span {
+#art .art_txt h4 span {
   position: absolute;
   top: 0;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
 
-#room .room_txt p {
+#art .art_txt p {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 2.1vw;
   position: relative;
@@ -573,14 +576,14 @@ header {
   overflow: hidden;
 }
 
-#room .room_txt p span {
+#art .art_txt p span {
   position: absolute;
   top: 0;
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
 
-.room_list {
+.art_list {
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -591,17 +594,21 @@ header {
           justify-content: space-between;
 }
 
-.room_list li {
+.art_list img {
+  width: 100%;
+}
+
+.art_list li {
   width: 32.5%;
   height: 100%;
   position: relative;
 }
 
-.room_list li p {
+.art_list li p {
   background-color: white;
 }
 
-.room_list li:first-child {
+.art_list li:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,7 +621,7 @@ header {
           justify-content: space-between;
 }
 
-.room_list li:first-child a {
+.art_list li:first-child a {
   display: block;
   width: 10rem;
   margin: 1.25rem 0;
@@ -628,23 +635,23 @@ header {
   line-height: 4.35rem;
 }
 
-.room_list li:first-child .room1 {
+.art_list li:first-child .art1 {
   width: 100%;
-  height: 650px;
+  height: auto;
   background-color: aquamarine;
 }
 
-.room2 {
+.art2 {
   width: 100%;
-  height: 406px;
+  height: auto;
   background-color: #555;
   position: absolute;
   top: 25%;
 }
 
-.room3 {
+.art3 {
   width: 100%;
-  height: 806px;
+  height: auto;
   background-color: #999;
 }
 
