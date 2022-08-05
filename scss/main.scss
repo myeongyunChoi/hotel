@@ -86,17 +86,15 @@ header {
     width: $wi;
     height: $he;
     position: relative;
-
-    img{
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: -500;
-    }
+    background-image: url(../img/main/main.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .text_line {
         width: 100%;
-        position: absolute;
+        position: fixed;
         top: 50%;
         transform: translateY(-50%);
         display: flex;
@@ -142,11 +140,12 @@ header {
         align-items: center;
 
         .guide_img_box1 {
-            width:30vw;
-            height: auto;
-            background-color: red;
+            width: 30vw;
+            height: 60rem;
             transition: 0.5s ease-in;
             z-index: 600;
+            position: relative;
+            overflow: hidden;
         }
     }
 
@@ -160,13 +159,25 @@ header {
         .guide_img_box2 {
             width: 32.5vw;
             height: auto;
-            background: #b3d4fc;
             margin-right: 5%;
             transition: 0.5s ease-in;
             z-index: 600;
+            position: relative;
+            overflow: hidden;
         }
     }
 }
+
+.guide_over_1, .guide_over_2{
+    width: 100%;
+    height: 100%;
+    background: #f0e4ed;
+    position: absolute;
+    top: 0;
+    transition: 0.75s all ease-in-out;
+}
+
+
 
 .guide {
     width: 100%;
@@ -241,7 +252,7 @@ header {
     padding-top: 20vh;
 
     h2{
-        font-size: 11vw;
+        font-size: 17.5rem;
         line-height: 18rem;
         font-family: $eng_font;
         font-weight: 500;
@@ -314,6 +325,7 @@ header {
             font-family: $title_font;
             font-size: 6.5rem;
             margin-bottom: 5rem;
+            letter-spacing: 0.4rem;
         }
 
         a{
@@ -665,7 +677,6 @@ header {
 .detail_bot_txt{
     width: 50%;
     height: 100%;
-    // border: 1px solid green;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
