@@ -162,8 +162,8 @@ header {
 #introduce .guide_img1 .guide_img_box1 {
   width: 30vw;
   height: 60rem;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
+  -webkit-transition: 0.75s ease-in-out all;
+  transition: 0.75s ease-in-out all;
   z-index: 600;
   position: relative;
   overflow: hidden;
@@ -187,8 +187,8 @@ header {
   width: 32.5vw;
   height: auto;
   margin-right: 5%;
-  -webkit-transition: 0.5s ease-in;
-  transition: 0.5s ease-in;
+  -webkit-transition: 0.75s ease-in-out all;
+  transition: 0.75s ease-in-out all;
   z-index: 600;
   position: relative;
   overflow: hidden;
@@ -508,8 +508,8 @@ header {
           transform: translate(-50%, -50%);
   z-index: 0;
   opacity: 0.3;
-  -webkit-transition: 0.5s all ease-in;
-  transition: 0.5s all ease-in;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 
 .four_img img {
@@ -625,6 +625,11 @@ header {
   line-height: 3rem;
 }
 
+.art_list li > div {
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
 .art_list li:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -652,16 +657,16 @@ header {
   line-height: 4.35rem;
 }
 
-.art_list li:first-child .art1 {
+.art1 {
   width: 100%;
   height: auto;
-  background-color: aquamarine;
+  position: absolute;
+  top: 30%;
 }
 
 .art2 {
   width: 100%;
   height: auto;
-  background-color: #555;
   position: absolute;
   top: 25%;
 }
@@ -669,7 +674,17 @@ header {
 .art3 {
   width: 100%;
   height: auto;
-  background-color: #999;
+  position: absolute;
+}
+
+.art_over {
+  position: absolute;
+  top: 0;
+  background-color: #f0e4ed;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.75s all ease-in-out;
+  transition: 0.75s all ease-in-out;
 }
 
 #signiel {
@@ -797,13 +812,27 @@ header {
 }
 
 .signiel_view {
-  width: auto;
+  width: 50%;
   height: 100%;
-  margin-right: 5rem;
+  padding-left: 13rem;
+  position: relative;
+  -webkit-transition: 0.75s all ease-in-out;
+  transition: 0.75s all ease-in-out;
+}
+
+.signiel_view .signiel_over {
+  position: absolute;
+  top: 0;
+  background: #f0e4ed;
+  height: 70rem;
+  width: 55rem;
+  -webkit-transition: 0.75s all ease-in-out;
+  transition: 0.75s all ease-in-out;
 }
 
 .signiel_view img {
-  height: 100%;
+  height: 70rem;
+  width: 55rem;
 }
 
 footer {
@@ -919,6 +948,10 @@ footer .foot_3 img {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.op_0 {
+  opacity: 0;
 }
 
 .op {

@@ -1,8 +1,5 @@
 window.addEventListener("scroll", function () {
 
-    // const cont = document.getElementById("introduce");
-
-    //main_view text 사라지는 효과
     const txt_line = document.querySelector(".text_line");
     let win_top = window.scrollY;
 
@@ -14,14 +11,6 @@ window.addEventListener("scroll", function () {
 
     const guide_top = document.getElementById("introduce").offsetTop;
     const mov_letter = document.querySelectorAll(".guide_big_box > h2");
-    // const main_view = document.querySelector("#main_view");
-
-
-    // if (win_top > guide_top/2){
-    //     main_view.style.width = "200%";
-    // }else{
-    //     main_view.style= "";
-    // }
 
     for (let l = 0; l < mov_letter.length; l++) {
         if (win_top > guide_top / 2) {
@@ -114,9 +103,9 @@ window.addEventListener("scroll", function () {
         slide.style.transform = `translateX(${mov}px)`;
     }
 
-    if (win_top >= art_top) {
-        slide.classList.remove("fix");
-    }
+    // if (win_top >= art_top) {
+    //     slide.classList.remove("fix");
+    // }
 
     const third_txt = document.querySelectorAll(".third_txt span");
 
@@ -158,6 +147,31 @@ window.addEventListener("scroll", function () {
             fifth_txt[i].style = "";
             fifth_txt[i].style.transition = `${i}s` ;
         }
+    }
+
+    const art_list = document.querySelectorAll(".art_con");
+    const art_over = document.querySelectorAll(".art_over");
+
+    for (let a = 0; a < art_list.length; a++){
+        if(win_top >= art_top){
+            art_list[a].classList.remove("op_0");
+            art_over[a].style.height = "0";
+        }else{
+            art_list[a].classList.add("op_0");
+            art_over[a].style.height = "100%";
+        }
+    }
+
+    const sig_view = document.querySelector(".signiel_view");
+    const sig_over = document.querySelector(".signiel_over");
+    const sig_hei = document.getElementById("signiel").clientHeight;
+
+    if(win_top >= art_top + sig_hei){
+        sig_over.style.height = "0"
+        sig_view.classList.remove("op_0");
+    }else{
+        sig_over.style = ""
+        sig_view.classList.add("op_0");
     }
 
     const one_hei = document.querySelector("#main_view").clientHeight;
