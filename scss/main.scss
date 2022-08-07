@@ -29,792 +29,1596 @@ a {
     text-decoration: none;
 }
 
-#wrap {
-    width: $wi;
-    height: auto;
-}
-
-header {
-    width: $wi;
-    height: 12.5vh;
-    position: fixed;
-    top: 0;
-    z-index: 500;
-}
-
-.menu {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2%;
-
-    li {
-        width: 15rem;
+@media(max-width:599px) {
+    #wrap {
+        width: $wi;
+        height: auto;
+    }
+    
+    header {
+        width: $wi;
+        height: 30rem;
+        position: fixed;
+        top: 0;
+        z-index: 500;
+    }
+    
+    .menu {
+        width: 100%;
         height: 100%;
-        text-align: center;
-        font-family: $title_font;
-        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        li {
+            width: 30rem;
+            height: 17rem;
+            text-align: center;
+            font-family: $title_font;
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &:nth-child(2){
+                width: 50rem;
+            }
+
+            a{
+                letter-spacing: 0.5rem;
+                line-height: 6rem;
+            }
+            a:nth-child(2){
+                font-size: 1rem;
+                letter-spacing: 0.2rem;
+                font-weight: bold;
+            }
+            &:nth-child(3){
+                font-size: 1.75rem;
+                text-align: center;
+                letter-spacing: 0.2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .menu_txt{
+        transition: 0.5s;
+        color: white;
+    }
+    
+    
+    #main_view {
+        width: $wi;
+        height: $he;
+        position: relative;
+        background-image: url(../img/main/main.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+        .text_line {
+            padding: 10% 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-evenly;
+            transition: 0.5s;
+            h2{
+                font-size: 17rem;
+                color: white;
+                line-height: 12rem;
+                font-family: $eng_font;
+                font-weight: 400; 
+            }
+    
+            .em{
+                font-family: 'Nanum Myeongjo', serif;
+                font-weight: 900;
+                font-style: italic;
+            }
+    
+            span{
+                line-height: 13rem;
+                font-size: 1.3rem;
+                color: white;
+            }
+        }
+    }
+    
+    #introduce {
+        width: $wi;
+        height: 500vh;
+        position: relative;
+        background-color: white;
+    
+        img{
+            width: 100%;
+        }
+    
+        .guide_img1 {
+            width: 100%;
+            height: $he;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .guide_img_box1 {
+                width: 30vw;
+                height: 60rem;
+                transition: 0.5s ease-in-out all;
+                z-index: 600;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+    
+        .guide_img2 {
+            width: 100%;
+            height: $he;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+    
+            .guide_img_box2 {
+                width: 32.5vw;
+                height: auto;
+                margin-right: 5%;
+                transition: 0.5s ease-in-out all;
+                z-index: 600;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+    }
+    
+    .guide_over_1, .guide_over_2{
+        width: 100%;
+        height: 100%;
+        background: #f0e4ed;
+        position: absolute;
+        top: 0;
+        transition: 0.75s all ease-in-out;
+    }
+    
+    .guide {
+        width: 100%;
+        height: $he;
+        position: sticky;
+        top: 0;
+        margin-bottom: $he/4;
+        padding: 4% 2.5%;
+    
+        h4{
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 7rem;
+            margin-bottom: 2rem;
+            margin-top: 8rem;
+            position: relative;
+            height: 10rem;
+            overflow: hidden;
+    
+            span{
+                transform: translateY(120%);
+                position: absolute;
+                top: 0;
+                transition: all 0.5s ease-in;
+            }
+        }
+    
+        p{
+            font-family: $kor_font;
+            font-size: 3rem;
+            position: relative;
+            height: 7rem;
+            overflow: hidden;
+    
+            span{
+                transform: translateY(120%);
+                position: absolute;
+                top: 0;
+                transition: all 0.5s ease-in;
+            }
+        }
+    
+        a{
+            display: block;
+            width: 100rem;
+            margin: 5rem 0;
+            text-align: center;
+            font-size: 1rem;
+            color: black;
+            overflow: hidden;
+            position: relative;
+            height: 8rem;
+            overflow: hidden;
+    
+            span{
+                border: 0.35rem solid black;
+                padding: 1.5rem 1rem;
+                border-radius: 5rem;
+                position: absolute;
+                line-height: 3rem;
+                top: 0;
+                left: 0%;
+                transform: translateY(120%);
+                transition: all 0.5s ease-in;
+            }
+        }
+    }
+    
+    .guide_big_box{
+        width: 100%;
+        height: 80%;
+        position: relative;
+    
+        h2{
+            font-size: 17.5rem;
+            font-family: $eng_font;
+            font-weight: 500;
+            transition: 0.5s ease-in-out;
+        }
+    
+        .left_h{
+            position: absolute;
+            left: 62.5%;
+            transform: translateX(-50%);
+            top: 29.5vh;
+        }
+    
+        .center_h{
+            position: absolute;
+            right: 50%;
+            top: 37.5vh;
+        }
+    
+        .right_h{
+            position: absolute;
+            right: 62.5%;
+            transform: translateX(50%);
+            top: 45.5vh;
+        }
+    }
+    
+    #hotell_more {
+        width: $wi;
+        height: $he*8;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+        background-color: white;
+        z-index: -100;
+        transition: all 0.35s ease-in;
+    }
+    
+    .slide {
+        width: 600vw;
+        height: $he;
+        display: flex;
+    
+        li {
+            position: relative;
+            width: 100vw;
+            height: $he;
+            transition: 0.5s all ease-in;
+            color: black;
+    
+            &:nth-child(2){
+                width: 150vw;
+            }
+    
+            &:nth-child(4){
+                width: 150vw;
+            }
+        }
+    }
+    
+    .first_slide{
+    
+        .middle_txt{
+            position: absolute;
+            left: 3.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+    
+            h4{
+                font-family: $title_font;
+                font-size: 6.5rem;
+                margin-bottom: 5rem;
+                letter-spacing: 0.4rem;
+            }
+    
+            a{
+                color: black;
+                cursor: pointer;
+                font-family: $eng_font;
+                font-size: 2rem;
+                border: 0.35rem solid black;
+                border-radius: 3rem;
+                padding: 1rem 1.25rem ;
+                background-color: white;
+            }
+        }
+    
+        h2{
+            font-weight: 400;
+            font-size: 18rem;
+            font-family: $eng_font;
+            letter-spacing: -0.3rem;
+            position: absolute;
+            bottom:0;
+            left: 50%;
+            transform: translate(-50%);
+    
+            span{
+                margin-right: 3rem;
+                font-family: $title_font;
+            }
+        }
+    }  
+    
+    .second_slide{
+        background-image: url("../img/main/second_bg.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .third_slide{
+    
+        img{
+            opacity: 0.2;
+            height: 100%;
+            width: auto;
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    .third_txt{
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        a{
-            letter-spacing: 0.5rem;
-            line-height: 2.5rem;
-        }
-        a:nth-child(2){
-            font-size: 1rem;
-            letter-spacing: 0.2rem;
-            font-weight: bold;
-        }
-        &:nth-child(3){
-            font-size: 1.75rem;
-            text-align: center;
-            letter-spacing: 0.2rem;
-            font-weight: 500;
-        }
-    }
-}
-
-.menu_txt{
-    transition: 0.5s;
-    color: white;
-}
-
-
-#main_view {
-    width: $wi;
-    height: $he;
-    position: relative;
-    background-image: url(../img/main/main.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .text_line {
-        width: 100%;
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-evenly;
-        transition: 0.5s;
-        h2{
-            font-size: 6vw;
-            color: white;
-            line-height: 12rem;
-            font-family: $eng_font;
-            font-weight: 400; 
-        }
-
-        .em{
-            font-family: 'Nanum Myeongjo', serif;
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        span{
-            line-height: 13rem;
-            font-size: 1.3rem;
-            color: white;
-        }
-    }
-}
-
-#introduce {
-    width: $wi;
-    height: 500vh;
-    position: relative;
-    background-color: white;
-
-    img{
-        width: 100%;
-    }
-
-    .guide_img1 {
-        width: 100%;
-        height: $he;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .guide_img_box1 {
-            width: 30vw;
-            height: 60rem;
-            transition: 0.5s ease-in-out all;
-            z-index: 600;
-            position: relative;
-            overflow: hidden;
-        }
-    }
-
-    .guide_img2 {
-        width: 100%;
-        height: $he;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        .guide_img_box2 {
-            width: 32.5vw;
-            height: auto;
-            margin-right: 5%;
-            transition: 0.5s ease-in-out all;
-            z-index: 600;
-            position: relative;
-            overflow: hidden;
-        }
-    }
-}
-
-.guide_over_1, .guide_over_2{
-    width: 100%;
-    height: 100%;
-    background: #f0e4ed;
-    position: absolute;
-    top: 0;
-    transition: 0.75s all ease-in-out;
-}
-
-.guide {
-    width: 100%;
-    height: $he;
-    position: sticky;
-    top: 0;
-    margin-bottom: $he/4;
-    padding: 4% 2.5%;
-
-    h4{
-        font-family: 'Nanum Myeongjo', serif;
-        font-size: 3.5vw;
-        margin-bottom: 2rem;
-        margin-top: - 4rem;
-        position: relative;
-        height: 3.5vw;
-        overflow: hidden;
-
-        span{
-            transform: translateY(120%);
-            position: absolute;
-            top: 0;
-            transition: all 0.5s ease-in;
-        }
-    }
-
-    p{
-        font-family: $kor_font;
-        font-size: 2.1vw;
-        position: relative;
-        height: 3vw;
-        overflow: hidden;
-
-        span{
-            transform: translateY(120%);
-            position: absolute;
-            top: 0;
-            transition: all 0.5s ease-in;
-        }
-    }
-
-    a{
-        display: block;
-        width: 10rem;
-        margin: 1.25rem 0;
-        text-align: center;
-        font-size: 1.25vw;
-        color: black;
-        overflow: hidden;
-        position: relative;
-        height: 4.7rem;
-        overflow: hidden;
-
-        span{
-            border: 0.35rem solid black;
-            padding: 0.25rem 1vw;
-            border-radius: 5rem;
-            position: absolute;
-            top: 0;
-            left: 0%;
-            transform: translateY(120%);
-            line-height: 3.5rem;
-            transition: all 0.5s ease-in;
-        }
-    }
-}
-
-.guide_big_box{
-    width: 100%;
-    height: 80%;
-    position: relative;
-    padding-top: 20vh;
-
-    h2{
-        font-size: 17.5rem;
-        line-height: 18rem;
-        font-family: $eng_font;
-        font-weight: 500;
-        transition: 0.5s ease-in-out;
-    }
-
-    .left_h{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 20vh;
-    }
-
-    .center_h{
-        position: absolute;
-        right: 50%;
-        top: 37.5vh;
-    }
-
-    .right_h{
-        position: absolute;
-        right: 50%;
-        transform: translateX(50%);
-        top: 55vh;
-    }
-}
-
-#hotell_more {
-    width: $wi;
-    height: $he*8;
-    position: relative;
-    top: 0;
-    overflow: hidden;
-    background-color: white;
-    z-index: -100;
-    transition: all 0.35s ease-in;
-}
-
-.slide {
-    width: 600vw;
-    height: $he;
-    display: flex;
-
-    li {
-        position: relative;
-        width: 100vw;
-        height: $he;
-        transition: 0.5s all ease-in;
-        color: black;
-
-        &:nth-child(2){
-            width: 150vw;
-        }
-
-        &:nth-child(4){
-            width: 150vw;
-        }
-    }
-}
-
-.first_slide{
-
-    .middle_txt{
-        position: absolute;
-        left: 3.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-
-        h4{
-            font-family: $title_font;
-            font-size: 6.5rem;
-            margin-bottom: 5rem;
-            letter-spacing: 0.4rem;
-        }
-
-        a{
-            color: black;
-            cursor: pointer;
-            font-family: $eng_font;
-            font-size: 2rem;
-            border: 0.35rem solid black;
-            border-radius: 3rem;
-            padding: 1rem 1.25rem ;
-            background-color: white;
-        }
-    }
-
-    h2{
-        font-weight: 400;
-        font-size: 18rem;
-        font-family: $eng_font;
-        letter-spacing: -0.3rem;
-        position: absolute;
-        bottom:0;
-        left: 50%;
-        transform: translate(-50%);
-
-        span{
-            margin-right: 3rem;
-            font-family: $title_font;
-        }
-    }
-}  
-
-.second_slide{
-    background-image: url("../img/main/second_bg.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.third_slide{
-
-    img{
-        height: 100%;
-        width: auto;
-        position: absolute;
-        left: 100%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.third_txt{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 3.5rem;
-    letter-spacing: 0.1rem;
-
-    p{
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 5rem;
-
-        span{
-            top:5rem;
-            position: absolute;
-            left: 50%;
-            transform: translate((-50%));
-            opacity: 0;
-            color: white;
-        }
-    }
-
-}
-
-.fourth_slide{
-
-    h2{
-        font-weight: 400;
-        font-size: 19rem;
-        font-family: $eng_font;
-        letter-spacing: 0.75rem;
-        width: 100%;
-        height: 100vh;
-        display:  flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-
-        span{
-            margin-bottom: -25rem;
-            font-family: $title_font;
-            height: auto;
-            transition: all 0.25s ease-in;
-            color: white;
-
-            &:nth-child(2){
-                transition: all 0.75s ease-in;
-            }
-
-            &:nth-child(3){
-                font-family: $eng_font;
-                transition: all 1.25s ease-in;
-            }
-        }
-    }
-}
-
-.four_img{
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%,-50%);
-    z-index: -300;
-    width: 120rem;
-    height: 67.5rem;
-    opacity: 0.3;
-    transition: 0.5s all ease-in;
-    .four_over{
-        width: 120rem;
-        height: 67.5rem;
-        background-color: #333;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        z-index: 0;
-        opacity: 0.3;
-        transition: 0.5s all ease-in-out;
-    }
-
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.fifth_txt{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 3.5rem;
-    letter-spacing: 0.1rem;
-    background-image: url(../img/main/five_bg.jpg);
-    background-position: center;
-    background-size: cover;
+        font-size: 5rem;
+        letter-spacing: 0.1rem;
     
-
-    p{
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 5rem;
-
-        span{
-            top:5rem;
-            position: absolute;
-            left: 50%;
-            transform: translate((-50%));
-            opacity: 0;
-            color: white;
+        p{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 10rem;
+    
+            span{
+                top: 10rem;
+                position: absolute;
+                left: 50%;
+                transform: translate((-50%));
+                opacity: 0;
+                color: white;
+            }
+        }
+    
+    }
+    
+    .fourth_slide{
+    
+        h2{
+            font-weight: 400;
+            font-size: 19rem;
+            font-family: $eng_font;
+            letter-spacing: 0.75rem;
+            width: 100%;
+            height: 100vh;
+            display:  flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+    
+            span{
+                margin-bottom: -25rem;
+                font-family: $title_font;
+                height: auto;
+                transition: all 0.25s ease-in;
+                color: white;
+    
+                &:nth-child(2){
+                    transition: all 0.75s ease-in;
+                }
+    
+                &:nth-child(3){
+                    font-family: $eng_font;
+                    transition: all 1.25s ease-in;
+                }
+            }
         }
     }
+    
+    .four_img{
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%,-50%);
+        z-index: -300;
+        width: 150rem;
+        // height: 67.5rem;
+        opacity: 0.3;
+        transition: 0.5s all ease-in;
+        .four_over{
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 0;
+            opacity: 0.3;
+            transition: 0.5s all ease-in-out;
+        }
+    
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .fifth_txt{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 5rem;
+        letter-spacing: 0.1rem;
+        background-image: url(../img/main/five_bg.jpg);
+        background-position: center;
+        background-size: cover;
+        
+    
+        p{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 10rem;
+    
+            span{
+                top:10rem;
+                position: absolute;
+                left: 50%;
+                transform: translate((-50%));
+                opacity: 0;
+                color: white;
+            }
+        }
+    }
+    
+    
+    #art {
+        width: $wi;
+        height: 167.5vh;
+        background-color: white;
+        padding: 25rem 5rem;
+    
+        .art_txt {
+            width: 50%;
+            height: auto;
+    
+            h4{
+                font-family: 'Nanum Myeongjo', serif;
+                font-size: 3.5vw;
+                margin-bottom: 2rem;
+                margin-top: - 4rem;
+                position: relative;
+                height: 7rem;
+                overflow: hidden;
+        
+                span{
+                    position: absolute;
+                    top: 0;
+                    transition: 0.3s ease-in;
+                }
+            }
+        
+            p{
+                font-family: $kor_font;
+                font-size: 2.5rem;
+                position: relative;
+                height: 4rem;
+                overflow: hidden;
+        
+                span{
+                    position: absolute;
+                    top: 0;
+                    transition: 0.3s ease-in;
+                }
+            }
+        }
+    }
+    
+    .art_list {
+        width: 100%;
+        height: $he;
+        display: flex;
+        justify-content: space-between;
+        
+        img{
+            width: 100%;
+        }
+    
+        li {
+            width: 32.5%;
+            height: 100%;
+            position: relative;
+            
+            p{
+                background-color: white;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+            
+            &>div{
+                transition: 0.5s all ease-in-out;
+            }
+        }
+    
+        li:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            a{
+                display: block;
+                width: 10rem;
+                margin: 2rem 0;
+                text-align: center;
+                font-size: 1.25vw;
+                color: black;
+                height: 4.7rem;
+                overflow: hidden;
+                border: 0.35rem solid black;
+                border-radius: 5rem;
+                line-height: 4.35rem;
+            }
+        }
+    }
+    
+    .art1 {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 30%;
+    }
+    
+    .art2 {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 25%;
+    }
+    
+    .art3 {
+        width: 100%;
+        height: auto;
+        position: absolute;
+    }
+    
+    .art_over{
+        position: absolute;
+        top:0;
+        background-color: #f0e4ed;
+        width: 100%;
+        height: 100%;
+        transition: 0.75s all ease-in-out;
+    }
+    
+    #signiel {
+        width: $wi;
+        height: $he;
+        display: flex;
+        justify-content: space-between;
+        padding: 10rem 5rem;
+        background-color: white;
+    }
+    
+    .detail{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+        .detail_txt{
+            height: 50%;
+    
+            h4{
+                font-family: 'Nanum Myeongjo', serif;
+                font-size: 3.5vw;
+                margin-bottom: 2rem;
+                position: relative;
+                height: 7rem;
+                overflow: hidden;
+                letter-spacing: 0.3rem;
+        
+                span{
+                    position: absolute;
+                    top: 0;
+                    transition: 0.3s ease-in;
+                }
+            }
+        
+            p{
+                font-family: $kor_font;
+                font-size: 2.5rem;
+                position: relative;
+                height: 4rem;
+                overflow: hidden;
+        
+                span{
+                    position: absolute;
+                    top: 0;
+                    transition: 0.3s ease-in;
+                }
+            }
+    
+            a{
+                display: block;
+                width: 10rem;
+                margin: 2rem 0;
+                text-align: center;
+                font-size: 1.25vw;
+                color: black;
+                height: 4.7rem;
+                overflow: hidden;
+                border: 0.35rem solid black;
+                border-radius: 5rem;
+                line-height: 4.35rem;
+            }
+        }
+        .detail_bot{
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    
+    .detail_bot_txt{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    
+        h5{
+            font-family: $eng_font;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            position: relative;
+            width: 100%;
+            height: 4rem;
+            overflow: hidden;
+        }
+    
+        p{
+            font-size: 2rem;
+            font-family: $kor_font;
+            font-weight: 300;
+            position: relative;
+            height: 3.3rem;
+        }
+    
+        span{
+            position: absolute;
+            top:0;
+        }
+    }
+    
+    .signiel_view{
+        width: 50%;
+        height: 100%;
+        padding-left: 13rem;
+        position: relative;
+        transition: 0.75s all ease-in-out;
+    
+        .signiel_over{
+            position: absolute;
+            top: 0;
+            background: #f0e4ed;
+            height: 70rem;
+            width: 55rem;
+            transition : 0.75s all ease-in-out;
+        }
+    
+        img{
+            height: 70rem;
+            width: 55rem;
+        }
+    }
+    
+    footer {
+        width: $wi;
+        height: 23.5rem;
+        background-color: #999;
+        display: flex;
+    
+        &>div{
+            height: 100%;
+            width: 31%;
+            border-left: 0.5px solid white;
+            padding: 3rem 0 0 2rem;
+        }
+    
+        .foot_3{
+            width: 38%;
+            overflow: hidden;
+            background-color: black;
+            position: relative;
+    
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                opacity: 0.6;
+            }
+        }
+    }
+    
+    .foot_2{
+        line-height: 1.5rem;
+    
+        a{
+            font-size: 1.2rem;
+            color: white;
+            font-family: $kor_font;
+            font-weight: 200;
+        }
+    }
+    
+    .foot_menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    
+        li {
+            width: 15rem;
+            height: 100%;
+            text-align: center;
+            font-family: $title_font;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            a{
+                letter-spacing: 0.5rem;
+                line-height: 2.5rem;
+                color: white;
+            }
+            a:nth-child(2){
+                font-size: 1rem;
+                letter-spacing: 0.2rem;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .foot_3_txt{
+        position: absolute;
+        z-index: 10;
+        li{
+            font-size: 1.2rem;
+            color: white;
+            font-family: $kor_font;
+            font-weight: 200;
+        }
+    }
+    
+    .menu_txt{
+        transition: 0.5s;
+        color: white;
+    }
+
 }
 
+@media(min-width:600px){
 
-#art {
-    width: $wi;
-    height: 167.5vh;
-    background-color: white;
-    padding: 25rem 5rem;
-
-    .art_txt {
-        width: 50%;
+    #wrap {
+        width: $wi;
         height: auto;
-
+    }
+    
+    header {
+        width: $wi;
+        height: 12.5vh;
+        position: fixed;
+        top: 0;
+        z-index: 500;
+    }
+    
+    .menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2%;
+    
+        li {
+            width: 15rem;
+            height: 100%;
+            text-align: center;
+            font-family: $title_font;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            a{
+                letter-spacing: 0.5rem;
+                line-height: 2.5rem;
+            }
+            a:nth-child(2){
+                font-size: 1rem;
+                letter-spacing: 0.2rem;
+                font-weight: bold;
+            }
+            &:nth-child(3){
+                font-size: 1.75rem;
+                text-align: center;
+                letter-spacing: 0.2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .menu_txt{
+        transition: 0.5s;
+        color: white;
+    }
+    
+    
+    #main_view {
+        width: $wi;
+        height: $he;
+        position: relative;
+        background-image: url(../img/main/main.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+        .text_line {
+            width: 100%;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-evenly;
+            transition: 0.5s;
+            h2{
+                font-size: 6vw;
+                color: white;
+                line-height: 12rem;
+                font-family: $eng_font;
+                font-weight: 400; 
+            }
+    
+            .em{
+                font-family: 'Nanum Myeongjo', serif;
+                font-weight: 900;
+                font-style: italic;
+            }
+    
+            span{
+                line-height: 13rem;
+                font-size: 1.3rem;
+                color: white;
+            }
+        }
+    }
+    
+    #introduce {
+        width: $wi;
+        height: 500vh;
+        position: relative;
+        background-color: white;
+    
+        img{
+            width: 100%;
+        }
+    
+        .guide_img1 {
+            width: 100%;
+            height: $he;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .guide_img_box1 {
+                width: 30vw;
+                height: 60rem;
+                transition: 0.5s ease-in-out all;
+                z-index: 600;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+    
+        .guide_img2 {
+            width: 100%;
+            height: $he;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+    
+            .guide_img_box2 {
+                width: 32.5vw;
+                height: auto;
+                margin-right: 5%;
+                transition: 0.5s ease-in-out all;
+                z-index: 600;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+    }
+    
+    .guide_over_1, .guide_over_2{
+        width: 100%;
+        height: 100%;
+        background: #f0e4ed;
+        position: absolute;
+        top: 0;
+        transition: 0.75s all ease-in-out;
+    }
+    
+    .guide {
+        width: 100%;
+        height: $he;
+        position: sticky;
+        top: 0;
+        margin-bottom: $he/4;
+        padding: 4% 2.5%;
+    
         h4{
             font-family: 'Nanum Myeongjo', serif;
             font-size: 3.5vw;
             margin-bottom: 2rem;
             margin-top: - 4rem;
             position: relative;
-            height: 7rem;
+            height: 3.5vw;
             overflow: hidden;
     
             span{
+                transform: translateY(120%);
                 position: absolute;
                 top: 0;
-                transition: 0.3s ease-in;
+                transition: all 0.5s ease-in;
             }
         }
     
         p{
             font-family: $kor_font;
-            font-size: 2.5rem;
+            font-size: 2.1vw;
             position: relative;
-            height: 4rem;
+            height: 3vw;
             overflow: hidden;
     
             span{
+                transform: translateY(120%);
                 position: absolute;
                 top: 0;
-                transition: 0.3s ease-in;
+                transition: all 0.5s ease-in;
             }
         }
-    }
-}
-
-.art_list {
-    width: 100%;
-    height: $he;
-    display: flex;
-    justify-content: space-between;
     
-    img{
-        width: 100%;
-    }
-
-    li {
-        width: 32.5%;
-        height: 100%;
-        position: relative;
-        
-        p{
-            background-color: white;
-            font-size: 1.5rem;
-            line-height: 3rem;
-        }
-        
-        &>div{
-            transition: 0.5s all ease-in-out;
-        }
-    }
-
-    li:first-child {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
         a{
             display: block;
             width: 10rem;
-            margin: 2rem 0;
+            margin: 1.25rem 0;
             text-align: center;
             font-size: 1.25vw;
             color: black;
+            overflow: hidden;
+            position: relative;
             height: 4.7rem;
-            overflow: hidden;
-            border: 0.35rem solid black;
-            border-radius: 5rem;
-            line-height: 4.35rem;
-        }
-    }
-}
-
-.art1 {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 30%;
-}
-
-.art2 {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 25%;
-}
-
-.art3 {
-    width: 100%;
-    height: auto;
-    position: absolute;
-}
-
-.art_over{
-    position: absolute;
-    top:0;
-    background-color: #f0e4ed;
-    width: 100%;
-    height: 100%;
-    transition: 0.75s all ease-in-out;
-}
-
-#signiel {
-    width: $wi;
-    height: $he;
-    display: flex;
-    justify-content: space-between;
-    padding: 10rem 5rem;
-    background-color: white;
-}
-
-.detail{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-
-    .detail_txt{
-        height: 50%;
-
-        h4{
-            font-family: 'Nanum Myeongjo', serif;
-            font-size: 3.5vw;
-            margin-bottom: 2rem;
-            position: relative;
-            height: 7rem;
-            overflow: hidden;
-            letter-spacing: 0.3rem;
-    
-            span{
-                position: absolute;
-                top: 0;
-                transition: 0.3s ease-in;
-            }
-        }
-    
-        p{
-            font-family: $kor_font;
-            font-size: 2.5rem;
-            position: relative;
-            height: 4rem;
             overflow: hidden;
     
             span{
+                border: 0.35rem solid black;
+                padding: 0.25rem 1vw;
+                border-radius: 5rem;
                 position: absolute;
                 top: 0;
-                transition: 0.3s ease-in;
+                left: 0%;
+                transform: translateY(120%);
+                line-height: 3.5rem;
+                transition: all 0.5s ease-in;
             }
         }
-
-        a{
-            display: block;
-            width: 10rem;
-            margin: 2rem 0;
-            text-align: center;
-            font-size: 1.25vw;
-            color: black;
-            height: 4.7rem;
-            overflow: hidden;
-            border: 0.35rem solid black;
-            border-radius: 5rem;
-            line-height: 4.35rem;
-        }
     }
-    .detail_bot{
-        height: 50%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-}
-
-.detail_bot_txt{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    h5{
-        font-family: $eng_font;
-        font-size: 2.5rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-        position: relative;
+    
+    .guide_big_box{
         width: 100%;
-        height: 4rem;
-        overflow: hidden;
-    }
-
-    p{
-        font-size: 2rem;
-        font-family: $kor_font;
-        font-weight: 300;
+        height: 80%;
         position: relative;
-        height: 3.3rem;
-    }
-
-    span{
-        position: absolute;
-        top:0;
-    }
-}
-
-.signiel_view{
-    width: 50%;
-    height: 100%;
-    padding-left: 13rem;
-    position: relative;
-    transition: 0.75s all ease-in-out;
-
-    .signiel_over{
-        position: absolute;
-        top: 0;
-        background: #f0e4ed;
-        height: 70rem;
-        width: 55rem;
-        transition : 0.75s all ease-in-out;
-    }
-
-    img{
-        height: 70rem;
-        width: 55rem;
-    }
-}
-
-footer {
-    width: $wi;
-    height: 23.5rem;
-    background-color: #999;
-    display: flex;
-
-    &>div{
-        height: 100%;
-        width: 31%;
-        border-left: 0.5px solid white;
-        padding: 3rem 0 0 2rem;
-    }
-
-    .foot_3{
-        width: 38%;
-        overflow: hidden;
-        background-color: black;
-        position: relative;
-
-        img{
+        padding-top: 20vh;
+    
+        h2{
+            font-size: 17.5rem;
+            line-height: 18rem;
+            font-family: $eng_font;
+            font-weight: 500;
+            transition: 0.5s ease-in-out;
+        }
+    
+        .left_h{
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0.6;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20vh;
+        }
+    
+        .center_h{
+            position: absolute;
+            right: 50%;
+            top: 37.5vh;
+        }
+    
+        .right_h{
+            position: absolute;
+            right: 50%;
+            transform: translateX(50%);
+            top: 55vh;
         }
     }
-}
-
-.foot_2{
-    line-height: 1.5rem;
-
-    a{
-        font-size: 1.2rem;
-        color: white;
-        font-family: $kor_font;
-        font-weight: 200;
+    
+    #hotell_more {
+        width: $wi;
+        height: $he*8;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+        background-color: white;
+        z-index: -100;
+        transition: all 0.35s ease-in;
     }
-}
-
-.foot_menu {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-
-    li {
-        width: 15rem;
+    
+    .slide {
+        width: 600vw;
+        height: $he;
+        display: flex;
+    
+        li {
+            position: relative;
+            width: 100vw;
+            height: $he;
+            transition: 0.5s all ease-in;
+            color: black;
+    
+            &:nth-child(2){
+                width: 150vw;
+            }
+    
+            &:nth-child(4){
+                width: 150vw;
+            }
+        }
+    }
+    
+    .first_slide{
+    
+        .middle_txt{
+            position: absolute;
+            left: 3.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+    
+            h4{
+                font-family: $title_font;
+                font-size: 6.5rem;
+                margin-bottom: 5rem;
+                letter-spacing: 0.4rem;
+            }
+    
+            a{
+                color: black;
+                cursor: pointer;
+                font-family: $eng_font;
+                font-size: 2rem;
+                border: 0.35rem solid black;
+                border-radius: 3rem;
+                padding: 1rem 1.25rem ;
+                background-color: white;
+            }
+        }
+    
+        h2{
+            font-weight: 400;
+            font-size: 18rem;
+            font-family: $eng_font;
+            letter-spacing: -0.3rem;
+            position: absolute;
+            bottom:0;
+            left: 50%;
+            transform: translate(-50%);
+    
+            span{
+                margin-right: 3rem;
+                font-family: $title_font;
+            }
+        }
+    }  
+    
+    .second_slide{
+        background-image: url("../img/main/second_bg.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .third_slide{
+    
+        img{
+            height: 100%;
+            width: auto;
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    .third_txt{
+        width: 80%;
         height: 100%;
-        text-align: center;
-        font-family: $title_font;
-        font-size: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-size: 3.5rem;
+        letter-spacing: 0.1rem;
+    
+        p{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 5rem;
+    
+            span{
+                top:5rem;
+                position: absolute;
+                left: 50%;
+                transform: translate((-50%));
+                opacity: 0;
+                color: white;
+            }
+        }
+    
+    }
+    
+    .fourth_slide{
+    
+        h2{
+            font-weight: 400;
+            font-size: 19rem;
+            font-family: $eng_font;
+            letter-spacing: 0.75rem;
+            width: 100%;
+            height: 100vh;
+            display:  flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+    
+            span{
+                margin-bottom: -25rem;
+                font-family: $title_font;
+                height: auto;
+                transition: all 0.25s ease-in;
+                color: white;
+    
+                &:nth-child(2){
+                    transition: all 0.75s ease-in;
+                }
+    
+                &:nth-child(3){
+                    font-family: $eng_font;
+                    transition: all 1.25s ease-in;
+                }
+            }
+        }
+    }
+    
+    .four_img{
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%,-50%);
+        z-index: -300;
+        width: 120rem;
+        height: 67.5rem;
+        opacity: 0.3;
+        transition: 0.5s all ease-in;
+        .four_over{
+            width: 120rem;
+            height: 67.5rem;
+            background-color: #333;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 0;
+            opacity: 0.3;
+            transition: 0.5s all ease-in-out;
+        }
+    
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .fifth_txt{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 3.5rem;
+        letter-spacing: 0.1rem;
+        background-image: url(../img/main/five_bg.jpg);
+        background-position: center;
+        background-size: cover;
+        
+    
+        p{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 5rem;
+    
+            span{
+                top:5rem;
+                position: absolute;
+                left: 50%;
+                transform: translate((-50%));
+                opacity: 0;
+                color: white;
+            }
+        }
+    }
+    
+    
+    #art {
+        width: $wi;
+        height: 167.5vh;
+        background-color: white;
+        padding: 25rem 5rem;
+    
+        .art_txt {
+            width: 50%;
+            height: auto;
+    
+            h4{
+                font-family: 'Nanum Myeongjo', serif;
+                font-size: 3.5vw;
+                margin-bottom: 2rem;
+                margin-top: - 4rem;
+                position: relative;
+                height: 7rem;
+                overflow: hidden;
+        
+                span{
+                    position: absolute;
+                    top: 0;
+                    transition: 0.3s ease-in;
+                }
+            }
+        
+            p{
+                font-family: $kor_font;
+                font-size: 2.5rem;
+                position: relative;
+                height: 4rem;
+                overflow: hidden;
+        
+                span{
+                    position: absolute;
+                    top: 0;
+                    transition: 0.3s ease-in;
+                }
+            }
+        }
+    }
+    
+    .art_list {
+        width: 100%;
+        height: $he;
+        display: flex;
+        justify-content: space-between;
+        
+        img{
+            width: 100%;
+        }
+    
+        li {
+            width: 32.5%;
+            height: 100%;
+            position: relative;
+            
+            p{
+                background-color: white;
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+            
+            &>div{
+                transition: 0.5s all ease-in-out;
+            }
+        }
+    
+        li:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            a{
+                display: block;
+                width: 10rem;
+                margin: 2rem 0;
+                text-align: center;
+                font-size: 1.25vw;
+                color: black;
+                height: 4.7rem;
+                overflow: hidden;
+                border: 0.35rem solid black;
+                border-radius: 5rem;
+                line-height: 4.35rem;
+            }
+        }
+    }
+    
+    .art1 {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 30%;
+    }
+    
+    .art2 {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 25%;
+    }
+    
+    .art3 {
+        width: 100%;
+        height: auto;
+        position: absolute;
+    }
+    
+    .art_over{
+        position: absolute;
+        top:0;
+        background-color: #f0e4ed;
+        width: 100%;
+        height: 100%;
+        transition: 0.75s all ease-in-out;
+    }
+    
+    #signiel {
+        width: $wi;
+        height: $he;
+        display: flex;
+        justify-content: space-between;
+        padding: 10rem 5rem;
+        background-color: white;
+    }
+    
+    .detail{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+        .detail_txt{
+            height: 50%;
+    
+            h4{
+                font-family: 'Nanum Myeongjo', serif;
+                font-size: 3.5vw;
+                margin-bottom: 2rem;
+                position: relative;
+                height: 7rem;
+                overflow: hidden;
+                letter-spacing: 0.3rem;
+        
+                span{
+                    position: absolute;
+                    top: 0;
+                    transition: 0.3s ease-in;
+                }
+            }
+        
+            p{
+                font-family: $kor_font;
+                font-size: 2.5rem;
+                position: relative;
+                height: 4rem;
+                overflow: hidden;
+        
+                span{
+                    position: absolute;
+                    top: 0;
+                    transition: 0.3s ease-in;
+                }
+            }
+    
+            a{
+                display: block;
+                width: 10rem;
+                margin: 2rem 0;
+                text-align: center;
+                font-size: 1.25vw;
+                color: black;
+                height: 4.7rem;
+                overflow: hidden;
+                border: 0.35rem solid black;
+                border-radius: 5rem;
+                line-height: 4.35rem;
+            }
+        }
+        .detail_bot{
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    
+    .detail_bot_txt{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    
+        h5{
+            font-family: $eng_font;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            position: relative;
+            width: 100%;
+            height: 4rem;
+            overflow: hidden;
+        }
+    
+        p{
+            font-size: 2rem;
+            font-family: $kor_font;
+            font-weight: 300;
+            position: relative;
+            height: 3.3rem;
+        }
+    
+        span{
+            position: absolute;
+            top:0;
+        }
+    }
+    
+    .signiel_view{
+        width: 50%;
+        height: 100%;
+        padding-left: 13rem;
+        position: relative;
+        transition: 0.75s all ease-in-out;
+    
+        .signiel_over{
+            position: absolute;
+            top: 0;
+            background: #f0e4ed;
+            height: 70rem;
+            width: 55rem;
+            transition : 0.75s all ease-in-out;
+        }
+    
+        img{
+            height: 70rem;
+            width: 55rem;
+        }
+    }
+    
+    footer {
+        width: $wi;
+        height: 23.5rem;
+        background-color: #999;
+        display: flex;
+    
+        &>div{
+            height: 100%;
+            width: 31%;
+            border-left: 0.5px solid white;
+            padding: 3rem 0 0 2rem;
+        }
+    
+        .foot_3{
+            width: 38%;
+            overflow: hidden;
+            background-color: black;
+            position: relative;
+    
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                opacity: 0.6;
+            }
+        }
+    }
+    
+    .foot_2{
+        line-height: 1.5rem;
+    
         a{
-            letter-spacing: 0.5rem;
-            line-height: 2.5rem;
+            font-size: 1.2rem;
             color: white;
-        }
-        a:nth-child(2){
-            font-size: 1rem;
-            letter-spacing: 0.2rem;
-            font-weight: bold;
+            font-family: $kor_font;
+            font-weight: 200;
         }
     }
-}
-
-.foot_3_txt{
-    position: absolute;
-    z-index: 10;
-    li{
-        font-size: 1.2rem;
+    
+    .foot_menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    
+        li {
+            width: 15rem;
+            height: 100%;
+            text-align: center;
+            font-family: $title_font;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            a{
+                letter-spacing: 0.5rem;
+                line-height: 2.5rem;
+                color: white;
+            }
+            a:nth-child(2){
+                font-size: 1rem;
+                letter-spacing: 0.2rem;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .foot_3_txt{
+        position: absolute;
+        z-index: 10;
+        li{
+            font-size: 1.2rem;
+            color: white;
+            font-family: $kor_font;
+            font-weight: 200;
+        }
+    }
+    
+    .menu_txt{
+        transition: 0.5s;
         color: white;
-        font-family: $kor_font;
-        font-weight: 200;
     }
-}
-
-.menu_txt{
-    transition: 0.5s;
-    color: white;
+    
 }
 
 //js class

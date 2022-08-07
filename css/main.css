@@ -20,920 +20,1649 @@ a {
   text-decoration: none;
 }
 
-#wrap {
-  width: 100%;
-  height: auto;
-}
-
-header {
-  width: 100%;
-  height: 12.5vh;
-  position: fixed;
-  top: 0;
-  z-index: 500;
-}
-
-.menu {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 2%;
-}
-
-.menu li {
-  width: 15rem;
-  height: 100%;
-  text-align: center;
-  font-family: "Nanum Myeongjo", serif;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.menu li a {
-  letter-spacing: 0.5rem;
-  line-height: 2.5rem;
-}
-
-.menu li a:nth-child(2) {
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
-  font-weight: bold;
-}
-
-.menu li:nth-child(3) {
-  font-size: 1.75rem;
-  text-align: center;
-  letter-spacing: 0.2rem;
-  font-weight: 500;
-}
-
-.menu_txt {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  color: white;
-}
-
-#main_view {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-image: url(../img/main/main.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#main_view .text_line {
-  width: 100%;
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#main_view .text_line h2 {
-  font-size: 6vw;
-  color: white;
-  line-height: 12rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-#main_view .text_line .em {
-  font-family: 'Nanum Myeongjo', serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-#main_view .text_line span {
-  line-height: 13rem;
-  font-size: 1.3rem;
-  color: white;
-}
-
-#introduce {
-  width: 100%;
-  height: 500vh;
-  position: relative;
-  background-color: white;
-}
-
-#introduce img {
-  width: 100%;
-}
-
-#introduce .guide_img1 {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#introduce .guide_img1 .guide_img_box1 {
-  width: 30vw;
-  height: 60rem;
-  -webkit-transition: 0.75s ease-in-out all;
-  transition: 0.75s ease-in-out all;
-  z-index: 600;
-  position: relative;
-  overflow: hidden;
-}
-
-#introduce .guide_img2 {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#introduce .guide_img2 .guide_img_box2 {
-  width: 32.5vw;
-  height: auto;
-  margin-right: 5%;
-  -webkit-transition: 0.75s ease-in-out all;
-  transition: 0.75s ease-in-out all;
-  z-index: 600;
-  position: relative;
-  overflow: hidden;
-}
-
-.guide_over_1, .guide_over_2 {
-  width: 100%;
-  height: 100%;
-  background: #f0e4ed;
-  position: absolute;
-  top: 0;
-  -webkit-transition: 0.75s all ease-in-out;
-  transition: 0.75s all ease-in-out;
-}
-
-.guide {
-  width: 100%;
-  height: 100vh;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  margin-bottom: 25vh;
-  padding: 4% 2.5%;
-}
-
-.guide h4 {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 3.5vw;
-  margin-bottom: 2rem;
-  margin-top: -4rem;
-  position: relative;
-  height: 3.5vw;
-  overflow: hidden;
-}
-
-.guide h4 span {
-  -webkit-transform: translateY(120%);
-          transform: translateY(120%);
-  position: absolute;
-  top: 0;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-
-.guide p {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2.1vw;
-  position: relative;
-  height: 3vw;
-  overflow: hidden;
-}
-
-.guide p span {
-  -webkit-transform: translateY(120%);
-          transform: translateY(120%);
-  position: absolute;
-  top: 0;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-
-.guide a {
-  display: block;
-  width: 10rem;
-  margin: 1.25rem 0;
-  text-align: center;
-  font-size: 1.25vw;
-  color: black;
-  overflow: hidden;
-  position: relative;
-  height: 4.7rem;
-  overflow: hidden;
-}
-
-.guide a span {
-  border: 0.35rem solid black;
-  padding: 0.25rem 1vw;
-  border-radius: 5rem;
-  position: absolute;
-  top: 0;
-  left: 0%;
-  -webkit-transform: translateY(120%);
-          transform: translateY(120%);
-  line-height: 3.5rem;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-}
-
-.guide_big_box {
-  width: 100%;
-  height: 80%;
-  position: relative;
-  padding-top: 20vh;
-}
-
-.guide_big_box h2 {
-  font-size: 17.5rem;
-  line-height: 18rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.guide_big_box .left_h {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 20vh;
-}
-
-.guide_big_box .center_h {
-  position: absolute;
-  right: 50%;
-  top: 37.5vh;
-}
-
-.guide_big_box .right_h {
-  position: absolute;
-  right: 50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-  top: 55vh;
-}
-
-#hotell_more {
-  width: 100%;
-  height: 800vh;
-  position: relative;
-  top: 0;
-  overflow: hidden;
-  background-color: white;
-  z-index: -100;
-  -webkit-transition: all 0.35s ease-in;
-  transition: all 0.35s ease-in;
-}
-
-.slide {
-  width: 600vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.slide li {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: 0.5s all ease-in;
-  transition: 0.5s all ease-in;
-  color: black;
-}
-
-.slide li:nth-child(2) {
-  width: 150vw;
-}
-
-.slide li:nth-child(4) {
-  width: 150vw;
-}
-
-.first_slide .middle_txt {
-  position: absolute;
-  left: 3.5rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.first_slide .middle_txt h4 {
-  font-family: "Nanum Myeongjo", serif;
-  font-size: 6.5rem;
-  margin-bottom: 5rem;
-  letter-spacing: 0.4rem;
-}
-
-.first_slide .middle_txt a {
-  color: black;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem;
-  border: 0.35rem solid black;
-  border-radius: 3rem;
-  padding: 1rem 1.25rem;
-  background-color: white;
-}
-
-.first_slide h2 {
-  font-weight: 400;
-  font-size: 18rem;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: -0.3rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-}
-
-.first_slide h2 span {
-  margin-right: 3rem;
-  font-family: "Nanum Myeongjo", serif;
-}
-
-.second_slide {
-  background-image: url("../img/main/second_bg.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.third_slide img {
-  height: 100%;
-  width: auto;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.third_txt {
-  width: 80%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 3.5rem;
-  letter-spacing: 0.1rem;
-}
-
-.third_txt p {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 5rem;
-}
-
-.third_txt p span {
-  top: 5rem;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  opacity: 0;
-  color: white;
-}
-
-.fourth_slide h2 {
-  font-weight: 400;
-  font-size: 19rem;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0.75rem;
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.fourth_slide h2 span {
-  margin-bottom: -25rem;
-  font-family: "Nanum Myeongjo", serif;
-  height: auto;
-  -webkit-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
-  color: white;
-}
-
-.fourth_slide h2 span:nth-child(2) {
-  -webkit-transition: all 0.75s ease-in;
-  transition: all 0.75s ease-in;
-}
-
-.fourth_slide h2 span:nth-child(3) {
-  font-family: "Roboto", sans-serif;
-  -webkit-transition: all 1.25s ease-in;
-  transition: all 1.25s ease-in;
-}
-
-.four_img {
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: -300;
-  width: 120rem;
-  height: 67.5rem;
-  opacity: 0.3;
-  -webkit-transition: 0.5s all ease-in;
-  transition: 0.5s all ease-in;
-}
-
-.four_img .four_over {
-  width: 120rem;
-  height: 67.5rem;
-  background-color: #333;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 0;
-  opacity: 0.3;
-  -webkit-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
-}
-
-.four_img img {
-  width: 100%;
-  height: 100%;
-}
-
-.fifth_txt {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 3.5rem;
-  letter-spacing: 0.1rem;
-  background-image: url(../img/main/five_bg.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
-.fifth_txt p {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 5rem;
-}
-
-.fifth_txt p span {
-  top: 5rem;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  opacity: 0;
-  color: white;
-}
-
-#art {
-  width: 100%;
-  height: 167.5vh;
-  background-color: white;
-  padding: 25rem 5rem;
-}
-
-#art .art_txt {
-  width: 50%;
-  height: auto;
-}
-
-#art .art_txt h4 {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 3.5vw;
-  margin-bottom: 2rem;
-  margin-top: -4rem;
-  position: relative;
-  height: 7rem;
-  overflow: hidden;
-}
-
-#art .art_txt h4 span {
-  position: absolute;
-  top: 0;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
-
-#art .art_txt p {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2.5rem;
-  position: relative;
-  height: 4rem;
-  overflow: hidden;
-}
-
-#art .art_txt p span {
-  position: absolute;
-  top: 0;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
-
-.art_list {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.art_list img {
-  width: 100%;
-}
-
-.art_list li {
-  width: 32.5%;
-  height: 100%;
-  position: relative;
-}
-
-.art_list li p {
-  background-color: white;
-  font-size: 1.5rem;
-  line-height: 3rem;
-}
-
-.art_list li > div {
-  -webkit-transition: 0.5s all ease-in-out;
-  transition: 0.5s all ease-in-out;
-}
-
-.art_list li:first-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.art_list li:first-child a {
-  display: block;
-  width: 10rem;
-  margin: 2rem 0;
-  text-align: center;
-  font-size: 1.25vw;
-  color: black;
-  height: 4.7rem;
-  overflow: hidden;
-  border: 0.35rem solid black;
-  border-radius: 5rem;
-  line-height: 4.35rem;
-}
-
-.art1 {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 30%;
-}
-
-.art2 {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 25%;
-}
-
-.art3 {
-  width: 100%;
-  height: auto;
-  position: absolute;
-}
-
-.art_over {
-  position: absolute;
-  top: 0;
-  background-color: #f0e4ed;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: 0.75s all ease-in-out;
-  transition: 0.75s all ease-in-out;
-}
-
-#signiel {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10rem 5rem;
-  background-color: white;
-}
-
-.detail {
-  width: 50%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.detail .detail_txt {
-  height: 50%;
-}
-
-.detail .detail_txt h4 {
-  font-family: 'Nanum Myeongjo', serif;
-  font-size: 3.5vw;
-  margin-bottom: 2rem;
-  position: relative;
-  height: 7rem;
-  overflow: hidden;
-  letter-spacing: 0.3rem;
-}
-
-.detail .detail_txt h4 span {
-  position: absolute;
-  top: 0;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
-
-.detail .detail_txt p {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 2.5rem;
-  position: relative;
-  height: 4rem;
-  overflow: hidden;
-}
-
-.detail .detail_txt p span {
-  position: absolute;
-  top: 0;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
-
-.detail .detail_txt a {
-  display: block;
-  width: 10rem;
-  margin: 2rem 0;
-  text-align: center;
-  font-size: 1.25vw;
-  color: black;
-  height: 4.7rem;
-  overflow: hidden;
-  border: 0.35rem solid black;
-  border-radius: 5rem;
-  line-height: 4.35rem;
-}
-
-.detail .detail_bot {
-  height: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.detail_bot_txt {
-  width: 50%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.detail_bot_txt h5 {
-  font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  position: relative;
-  width: 100%;
-  height: 4rem;
-  overflow: hidden;
-}
-
-.detail_bot_txt p {
-  font-size: 2rem;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 300;
-  position: relative;
-  height: 3.3rem;
-}
-
-.detail_bot_txt span {
-  position: absolute;
-  top: 0;
-}
-
-.signiel_view {
-  width: 50%;
-  height: 100%;
-  padding-left: 13rem;
-  position: relative;
-  -webkit-transition: 0.75s all ease-in-out;
-  transition: 0.75s all ease-in-out;
-}
-
-.signiel_view .signiel_over {
-  position: absolute;
-  top: 0;
-  background: #f0e4ed;
-  height: 70rem;
-  width: 55rem;
-  -webkit-transition: 0.75s all ease-in-out;
-  transition: 0.75s all ease-in-out;
-}
-
-.signiel_view img {
-  height: 70rem;
-  width: 55rem;
-}
-
-footer {
-  width: 100%;
-  height: 23.5rem;
-  background-color: #999;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-footer > div {
-  height: 100%;
-  width: 31%;
-  border-left: 0.5px solid white;
-  padding: 3rem 0 0 2rem;
-}
-
-footer .foot_3 {
-  width: 38%;
-  overflow: hidden;
-  background-color: black;
-  position: relative;
-}
-
-footer .foot_3 img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0.6;
-}
-
-.foot_2 {
-  line-height: 1.5rem;
-}
-
-.foot_2 a {
-  font-size: 1.2rem;
-  color: white;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 200;
-}
-
-.foot_menu {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.foot_menu li {
-  width: 15rem;
-  height: 100%;
-  text-align: center;
-  font-family: "Nanum Myeongjo", serif;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.foot_menu li a {
-  letter-spacing: 0.5rem;
-  line-height: 2.5rem;
-  color: white;
-}
-
-.foot_menu li a:nth-child(2) {
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
-  font-weight: bold;
-}
-
-.foot_3_txt {
-  position: absolute;
-  z-index: 10;
-}
-
-.foot_3_txt li {
-  font-size: 1.2rem;
-  color: white;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 200;
-}
-
-.menu_txt {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  color: white;
+@media (max-width: 599px) {
+  #wrap {
+    width: 100%;
+    height: auto;
+  }
+  header {
+    width: 100%;
+    height: 30rem;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+  }
+  .menu {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu li {
+    width: 30rem;
+    height: 17rem;
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu li:nth-child(2) {
+    width: 50rem;
+  }
+  .menu li a {
+    letter-spacing: 0.5rem;
+    line-height: 6rem;
+  }
+  .menu li a:nth-child(2) {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+  .menu li:nth-child(3) {
+    font-size: 1.75rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+  }
+  .menu_txt {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: white;
+  }
+  #main_view {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/main/main.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #main_view .text_line {
+    padding: 10% 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #main_view .text_line h2 {
+    font-size: 17rem;
+    color: white;
+    line-height: 12rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+  #main_view .text_line .em {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  #main_view .text_line span {
+    line-height: 13rem;
+    font-size: 1.3rem;
+    color: white;
+  }
+  #introduce {
+    width: 100%;
+    height: 500vh;
+    position: relative;
+    background-color: white;
+  }
+  #introduce img {
+    width: 100%;
+  }
+  #introduce .guide_img1 {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #introduce .guide_img1 .guide_img_box1 {
+    width: 30vw;
+    height: 60rem;
+    -webkit-transition: 0.5s ease-in-out all;
+    transition: 0.5s ease-in-out all;
+    z-index: 600;
+    position: relative;
+    overflow: hidden;
+  }
+  #introduce .guide_img2 {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #introduce .guide_img2 .guide_img_box2 {
+    width: 32.5vw;
+    height: auto;
+    margin-right: 5%;
+    -webkit-transition: 0.5s ease-in-out all;
+    transition: 0.5s ease-in-out all;
+    z-index: 600;
+    position: relative;
+    overflow: hidden;
+  }
+  .guide_over_1, .guide_over_2 {
+    width: 100%;
+    height: 100%;
+    background: #f0e4ed;
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.75s all ease-in-out;
+    transition: 0.75s all ease-in-out;
+  }
+  .guide {
+    width: 100%;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: 25vh;
+    padding: 4% 2.5%;
+  }
+  .guide h4 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 7rem;
+    margin-bottom: 2rem;
+    margin-top: 8rem;
+    position: relative;
+    height: 10rem;
+    overflow: hidden;
+  }
+  .guide h4 span {
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%);
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  .guide p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 3rem;
+    position: relative;
+    height: 7rem;
+    overflow: hidden;
+  }
+  .guide p span {
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%);
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  .guide a {
+    display: block;
+    width: 100rem;
+    margin: 5rem 0;
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    overflow: hidden;
+    position: relative;
+    height: 8rem;
+    overflow: hidden;
+  }
+  .guide a span {
+    border: 0.35rem solid black;
+    padding: 1.5rem 1rem;
+    border-radius: 5rem;
+    position: absolute;
+    line-height: 3rem;
+    top: 0;
+    left: 0%;
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%);
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  .guide_big_box {
+    width: 100%;
+    height: 80%;
+    position: relative;
+  }
+  .guide_big_box h2 {
+    font-size: 17.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  .guide_big_box .left_h {
+    position: absolute;
+    left: 62.5%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 29.5vh;
+  }
+  .guide_big_box .center_h {
+    position: absolute;
+    right: 50%;
+    top: 37.5vh;
+  }
+  .guide_big_box .right_h {
+    position: absolute;
+    right: 62.5%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    top: 45.5vh;
+  }
+  #hotell_more {
+    width: 100%;
+    height: 800vh;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    z-index: -100;
+    -webkit-transition: all 0.35s ease-in;
+    transition: all 0.35s ease-in;
+  }
+  .slide {
+    width: 600vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .slide li {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: 0.5s all ease-in;
+    transition: 0.5s all ease-in;
+    color: black;
+  }
+  .slide li:nth-child(2) {
+    width: 150vw;
+  }
+  .slide li:nth-child(4) {
+    width: 150vw;
+  }
+  .first_slide .middle_txt {
+    position: absolute;
+    left: 3.5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .first_slide .middle_txt h4 {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 6.5rem;
+    margin-bottom: 5rem;
+    letter-spacing: 0.4rem;
+  }
+  .first_slide .middle_txt a {
+    color: black;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    border: 0.35rem solid black;
+    border-radius: 3rem;
+    padding: 1rem 1.25rem;
+    background-color: white;
+  }
+  .first_slide h2 {
+    font-weight: 400;
+    font-size: 18rem;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: -0.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  .first_slide h2 span {
+    margin-right: 3rem;
+    font-family: "Nanum Myeongjo", serif;
+  }
+  .second_slide {
+    background-image: url("../img/main/second_bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .third_slide img {
+    opacity: 0.2;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .third_txt {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 5rem;
+    letter-spacing: 0.1rem;
+  }
+  .third_txt p {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 10rem;
+  }
+  .third_txt p span {
+    top: 10rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    opacity: 0;
+    color: white;
+  }
+  .fourth_slide h2 {
+    font-weight: 400;
+    font-size: 19rem;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.75rem;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .fourth_slide h2 span {
+    margin-bottom: -25rem;
+    font-family: "Nanum Myeongjo", serif;
+    height: auto;
+    -webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
+    color: white;
+  }
+  .fourth_slide h2 span:nth-child(2) {
+    -webkit-transition: all 0.75s ease-in;
+    transition: all 0.75s ease-in;
+  }
+  .fourth_slide h2 span:nth-child(3) {
+    font-family: "Roboto", sans-serif;
+    -webkit-transition: all 1.25s ease-in;
+    transition: all 1.25s ease-in;
+  }
+  .four_img {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -300;
+    width: 150rem;
+    opacity: 0.3;
+    -webkit-transition: 0.5s all ease-in;
+    transition: 0.5s all ease-in;
+  }
+  .four_img .four_over {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.3;
+    -webkit-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+  }
+  .four_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .fifth_txt {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 5rem;
+    letter-spacing: 0.1rem;
+    background-image: url(../img/main/five_bg.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .fifth_txt p {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 10rem;
+  }
+  .fifth_txt p span {
+    top: 10rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    opacity: 0;
+    color: white;
+  }
+  #art {
+    width: 100%;
+    height: 167.5vh;
+    background-color: white;
+    padding: 25rem 5rem;
+  }
+  #art .art_txt {
+    width: 50%;
+    height: auto;
+  }
+  #art .art_txt h4 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 3.5vw;
+    margin-bottom: 2rem;
+    margin-top: -4rem;
+    position: relative;
+    height: 7rem;
+    overflow: hidden;
+  }
+  #art .art_txt h4 span {
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  #art .art_txt p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.5rem;
+    position: relative;
+    height: 4rem;
+    overflow: hidden;
+  }
+  #art .art_txt p span {
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  .art_list {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .art_list img {
+    width: 100%;
+  }
+  .art_list li {
+    width: 32.5%;
+    height: 100%;
+    position: relative;
+  }
+  .art_list li p {
+    background-color: white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  .art_list li > div {
+    -webkit-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+  }
+  .art_list li:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .art_list li:first-child a {
+    display: block;
+    width: 10rem;
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.25vw;
+    color: black;
+    height: 4.7rem;
+    overflow: hidden;
+    border: 0.35rem solid black;
+    border-radius: 5rem;
+    line-height: 4.35rem;
+  }
+  .art1 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 30%;
+  }
+  .art2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 25%;
+  }
+  .art3 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+  .art_over {
+    position: absolute;
+    top: 0;
+    background-color: #f0e4ed;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.75s all ease-in-out;
+    transition: 0.75s all ease-in-out;
+  }
+  #signiel {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10rem 5rem;
+    background-color: white;
+  }
+  .detail {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .detail .detail_txt {
+    height: 50%;
+  }
+  .detail .detail_txt h4 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 3.5vw;
+    margin-bottom: 2rem;
+    position: relative;
+    height: 7rem;
+    overflow: hidden;
+    letter-spacing: 0.3rem;
+  }
+  .detail .detail_txt h4 span {
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  .detail .detail_txt p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.5rem;
+    position: relative;
+    height: 4rem;
+    overflow: hidden;
+  }
+  .detail .detail_txt p span {
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  .detail .detail_txt a {
+    display: block;
+    width: 10rem;
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.25vw;
+    color: black;
+    height: 4.7rem;
+    overflow: hidden;
+    border: 0.35rem solid black;
+    border-radius: 5rem;
+    line-height: 4.35rem;
+  }
+  .detail .detail_bot {
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .detail_bot_txt {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .detail_bot_txt h5 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    overflow: hidden;
+  }
+  .detail_bot_txt p {
+    font-size: 2rem;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    position: relative;
+    height: 3.3rem;
+  }
+  .detail_bot_txt span {
+    position: absolute;
+    top: 0;
+  }
+  .signiel_view {
+    width: 50%;
+    height: 100%;
+    padding-left: 13rem;
+    position: relative;
+    -webkit-transition: 0.75s all ease-in-out;
+    transition: 0.75s all ease-in-out;
+  }
+  .signiel_view .signiel_over {
+    position: absolute;
+    top: 0;
+    background: #f0e4ed;
+    height: 70rem;
+    width: 55rem;
+    -webkit-transition: 0.75s all ease-in-out;
+    transition: 0.75s all ease-in-out;
+  }
+  .signiel_view img {
+    height: 70rem;
+    width: 55rem;
+  }
+  footer {
+    width: 100%;
+    height: 23.5rem;
+    background-color: #999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer > div {
+    height: 100%;
+    width: 31%;
+    border-left: 0.5px solid white;
+    padding: 3rem 0 0 2rem;
+  }
+  footer .foot_3 {
+    width: 38%;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+  }
+  footer .foot_3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.6;
+  }
+  .foot_2 {
+    line-height: 1.5rem;
+  }
+  .foot_2 a {
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 200;
+  }
+  .foot_menu {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .foot_menu li {
+    width: 15rem;
+    height: 100%;
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .foot_menu li a {
+    letter-spacing: 0.5rem;
+    line-height: 2.5rem;
+    color: white;
+  }
+  .foot_menu li a:nth-child(2) {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+  .foot_3_txt {
+    position: absolute;
+    z-index: 10;
+  }
+  .foot_3_txt li {
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 200;
+  }
+  .menu_txt {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: white;
+  }
+}
+
+@media (min-width: 600px) {
+  #wrap {
+    width: 100%;
+    height: auto;
+  }
+  header {
+    width: 100%;
+    height: 12.5vh;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+  }
+  .menu {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2%;
+  }
+  .menu li {
+    width: 15rem;
+    height: 100%;
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu li a {
+    letter-spacing: 0.5rem;
+    line-height: 2.5rem;
+  }
+  .menu li a:nth-child(2) {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+  .menu li:nth-child(3) {
+    font-size: 1.75rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+  }
+  .menu_txt {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: white;
+  }
+  #main_view {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/main/main.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #main_view .text_line {
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #main_view .text_line h2 {
+    font-size: 6vw;
+    color: white;
+    line-height: 12rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+  #main_view .text_line .em {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  #main_view .text_line span {
+    line-height: 13rem;
+    font-size: 1.3rem;
+    color: white;
+  }
+  #introduce {
+    width: 100%;
+    height: 500vh;
+    position: relative;
+    background-color: white;
+  }
+  #introduce img {
+    width: 100%;
+  }
+  #introduce .guide_img1 {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #introduce .guide_img1 .guide_img_box1 {
+    width: 30vw;
+    height: 60rem;
+    -webkit-transition: 0.5s ease-in-out all;
+    transition: 0.5s ease-in-out all;
+    z-index: 600;
+    position: relative;
+    overflow: hidden;
+  }
+  #introduce .guide_img2 {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #introduce .guide_img2 .guide_img_box2 {
+    width: 32.5vw;
+    height: auto;
+    margin-right: 5%;
+    -webkit-transition: 0.5s ease-in-out all;
+    transition: 0.5s ease-in-out all;
+    z-index: 600;
+    position: relative;
+    overflow: hidden;
+  }
+  .guide_over_1, .guide_over_2 {
+    width: 100%;
+    height: 100%;
+    background: #f0e4ed;
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.75s all ease-in-out;
+    transition: 0.75s all ease-in-out;
+  }
+  .guide {
+    width: 100%;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: 25vh;
+    padding: 4% 2.5%;
+  }
+  .guide h4 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 3.5vw;
+    margin-bottom: 2rem;
+    margin-top: -4rem;
+    position: relative;
+    height: 3.5vw;
+    overflow: hidden;
+  }
+  .guide h4 span {
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%);
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  .guide p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.1vw;
+    position: relative;
+    height: 3vw;
+    overflow: hidden;
+  }
+  .guide p span {
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%);
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  .guide a {
+    display: block;
+    width: 10rem;
+    margin: 1.25rem 0;
+    text-align: center;
+    font-size: 1.25vw;
+    color: black;
+    overflow: hidden;
+    position: relative;
+    height: 4.7rem;
+    overflow: hidden;
+  }
+  .guide a span {
+    border: 0.35rem solid black;
+    padding: 0.25rem 1vw;
+    border-radius: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%);
+    line-height: 3.5rem;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+  }
+  .guide_big_box {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    padding-top: 20vh;
+  }
+  .guide_big_box h2 {
+    font-size: 17.5rem;
+    line-height: 18rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  .guide_big_box .left_h {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 20vh;
+  }
+  .guide_big_box .center_h {
+    position: absolute;
+    right: 50%;
+    top: 37.5vh;
+  }
+  .guide_big_box .right_h {
+    position: absolute;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    top: 55vh;
+  }
+  #hotell_more {
+    width: 100%;
+    height: 800vh;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    background-color: white;
+    z-index: -100;
+    -webkit-transition: all 0.35s ease-in;
+    transition: all 0.35s ease-in;
+  }
+  .slide {
+    width: 600vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .slide li {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: 0.5s all ease-in;
+    transition: 0.5s all ease-in;
+    color: black;
+  }
+  .slide li:nth-child(2) {
+    width: 150vw;
+  }
+  .slide li:nth-child(4) {
+    width: 150vw;
+  }
+  .first_slide .middle_txt {
+    position: absolute;
+    left: 3.5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .first_slide .middle_txt h4 {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 6.5rem;
+    margin-bottom: 5rem;
+    letter-spacing: 0.4rem;
+  }
+  .first_slide .middle_txt a {
+    color: black;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    border: 0.35rem solid black;
+    border-radius: 3rem;
+    padding: 1rem 1.25rem;
+    background-color: white;
+  }
+  .first_slide h2 {
+    font-weight: 400;
+    font-size: 18rem;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: -0.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  .first_slide h2 span {
+    margin-right: 3rem;
+    font-family: "Nanum Myeongjo", serif;
+  }
+  .second_slide {
+    background-image: url("../img/main/second_bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .third_slide img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .third_txt {
+    width: 80%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+  }
+  .third_txt p {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 5rem;
+  }
+  .third_txt p span {
+    top: 5rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    opacity: 0;
+    color: white;
+  }
+  .fourth_slide h2 {
+    font-weight: 400;
+    font-size: 19rem;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.75rem;
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .fourth_slide h2 span {
+    margin-bottom: -25rem;
+    font-family: "Nanum Myeongjo", serif;
+    height: auto;
+    -webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
+    color: white;
+  }
+  .fourth_slide h2 span:nth-child(2) {
+    -webkit-transition: all 0.75s ease-in;
+    transition: all 0.75s ease-in;
+  }
+  .fourth_slide h2 span:nth-child(3) {
+    font-family: "Roboto", sans-serif;
+    -webkit-transition: all 1.25s ease-in;
+    transition: all 1.25s ease-in;
+  }
+  .four_img {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -300;
+    width: 120rem;
+    height: 67.5rem;
+    opacity: 0.3;
+    -webkit-transition: 0.5s all ease-in;
+    transition: 0.5s all ease-in;
+  }
+  .four_img .four_over {
+    width: 120rem;
+    height: 67.5rem;
+    background-color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.3;
+    -webkit-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+  }
+  .four_img img {
+    width: 100%;
+    height: 100%;
+  }
+  .fifth_txt {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 3.5rem;
+    letter-spacing: 0.1rem;
+    background-image: url(../img/main/five_bg.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .fifth_txt p {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 5rem;
+  }
+  .fifth_txt p span {
+    top: 5rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    opacity: 0;
+    color: white;
+  }
+  #art {
+    width: 100%;
+    height: 167.5vh;
+    background-color: white;
+    padding: 25rem 5rem;
+  }
+  #art .art_txt {
+    width: 50%;
+    height: auto;
+  }
+  #art .art_txt h4 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 3.5vw;
+    margin-bottom: 2rem;
+    margin-top: -4rem;
+    position: relative;
+    height: 7rem;
+    overflow: hidden;
+  }
+  #art .art_txt h4 span {
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  #art .art_txt p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.5rem;
+    position: relative;
+    height: 4rem;
+    overflow: hidden;
+  }
+  #art .art_txt p span {
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  .art_list {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .art_list img {
+    width: 100%;
+  }
+  .art_list li {
+    width: 32.5%;
+    height: 100%;
+    position: relative;
+  }
+  .art_list li p {
+    background-color: white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  .art_list li > div {
+    -webkit-transition: 0.5s all ease-in-out;
+    transition: 0.5s all ease-in-out;
+  }
+  .art_list li:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .art_list li:first-child a {
+    display: block;
+    width: 10rem;
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.25vw;
+    color: black;
+    height: 4.7rem;
+    overflow: hidden;
+    border: 0.35rem solid black;
+    border-radius: 5rem;
+    line-height: 4.35rem;
+  }
+  .art1 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 30%;
+  }
+  .art2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 25%;
+  }
+  .art3 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
+  .art_over {
+    position: absolute;
+    top: 0;
+    background-color: #f0e4ed;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.75s all ease-in-out;
+    transition: 0.75s all ease-in-out;
+  }
+  #signiel {
+    width: 100%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10rem 5rem;
+    background-color: white;
+  }
+  .detail {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .detail .detail_txt {
+    height: 50%;
+  }
+  .detail .detail_txt h4 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 3.5vw;
+    margin-bottom: 2rem;
+    position: relative;
+    height: 7rem;
+    overflow: hidden;
+    letter-spacing: 0.3rem;
+  }
+  .detail .detail_txt h4 span {
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  .detail .detail_txt p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 2.5rem;
+    position: relative;
+    height: 4rem;
+    overflow: hidden;
+  }
+  .detail .detail_txt p span {
+    position: absolute;
+    top: 0;
+    -webkit-transition: 0.3s ease-in;
+    transition: 0.3s ease-in;
+  }
+  .detail .detail_txt a {
+    display: block;
+    width: 10rem;
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 1.25vw;
+    color: black;
+    height: 4.7rem;
+    overflow: hidden;
+    border: 0.35rem solid black;
+    border-radius: 5rem;
+    line-height: 4.35rem;
+  }
+  .detail .detail_bot {
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .detail_bot_txt {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .detail_bot_txt h5 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    overflow: hidden;
+  }
+  .detail_bot_txt p {
+    font-size: 2rem;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    position: relative;
+    height: 3.3rem;
+  }
+  .detail_bot_txt span {
+    position: absolute;
+    top: 0;
+  }
+  .signiel_view {
+    width: 50%;
+    height: 100%;
+    padding-left: 13rem;
+    position: relative;
+    -webkit-transition: 0.75s all ease-in-out;
+    transition: 0.75s all ease-in-out;
+  }
+  .signiel_view .signiel_over {
+    position: absolute;
+    top: 0;
+    background: #f0e4ed;
+    height: 70rem;
+    width: 55rem;
+    -webkit-transition: 0.75s all ease-in-out;
+    transition: 0.75s all ease-in-out;
+  }
+  .signiel_view img {
+    height: 70rem;
+    width: 55rem;
+  }
+  footer {
+    width: 100%;
+    height: 23.5rem;
+    background-color: #999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer > div {
+    height: 100%;
+    width: 31%;
+    border-left: 0.5px solid white;
+    padding: 3rem 0 0 2rem;
+  }
+  footer .foot_3 {
+    width: 38%;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+  }
+  footer .foot_3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.6;
+  }
+  .foot_2 {
+    line-height: 1.5rem;
+  }
+  .foot_2 a {
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 200;
+  }
+  .foot_menu {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .foot_menu li {
+    width: 15rem;
+    height: 100%;
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .foot_menu li a {
+    letter-spacing: 0.5rem;
+    line-height: 2.5rem;
+    color: white;
+  }
+  .foot_menu li a:nth-child(2) {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+  .foot_3_txt {
+    position: absolute;
+    z-index: 10;
+  }
+  .foot_3_txt li {
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 200;
+  }
+  .menu_txt {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: white;
+  }
 }
 
 .black {
