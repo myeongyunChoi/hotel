@@ -59,7 +59,7 @@ window.addEventListener("scroll", function () {
     }
 
 
-    const slide_wrap = document.getElementById("hotell_more");
+    const slide_wrap = document.getElementById("hotel_more");
     const slide = document.querySelector(".slide");
     const s_wid = slide.offsetWidth;
     const s_top = slide_wrap.offsetTop;
@@ -166,7 +166,7 @@ window.addEventListener("scroll", function () {
     const sig_over = document.querySelector(".signiel_over");
     const sig_hei = document.getElementById("signiel").clientHeight;
 
-    if(win_top >= art_top + sig_hei){
+    if(win_top >= art_top + sig_hei/3){
         sig_over.style.height = "0"
         sig_view.classList.remove("op_0");
     }else{
