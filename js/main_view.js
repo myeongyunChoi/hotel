@@ -1,4 +1,4 @@
-if (window.matchMedia("(min-width: 1300px)").matches) {
+if (window.matchMedia("(min-width: 1050px)").matches) {
     window.onload = function () {
         const main_clip = document.querySelector(".main_overlay");
         const txt_line = document.querySelector(".text_line");
